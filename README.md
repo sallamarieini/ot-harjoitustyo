@@ -4,7 +4,7 @@
 
 ### Viikko 1
 
-Tämä on **hairjoittelua** *ohjelmistotekniikan* kurssilla.
+Tämä on **hairjoittelua** *ohjelmistotekniikan* kurssin ensimmäisellä viikolla.
 
 [komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
 
