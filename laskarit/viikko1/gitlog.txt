@@ -1,3 +1,5 @@
+Osa 2
+
 saluitto@lx9-fuxi142:~/ot_viikko1/tiedostoja$ git log --stat | cat
 commit 5b7f49d052df05a2976bfc88c4f074340d248e08
 Author: sallamarieini <sallamarieini@gmail.com>
