@@ -1,0 +1,115 @@
+saluitto@lx9-fuxi142:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit 5b7f49d052df05a2976bfc88c4f074340d248e08
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:26:01 2020 +0200
+
+    poisto ja uusi nimi
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit eeb65de700ff1ffe0d69926c89812a24791d120e
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:22:23 2020 +0200
+
+    hakemisto ja tiedostot luotu
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c93689a96756df9d187f9c8c7b2a8c6a18156cda
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:14:35 2020 +0200
+
+    git ad -p harjoittelua
+
+ eka.txt    | 8 ++------
+ kolmas.txt | 2 ++
+ 2 files changed, 4 insertions(+), 6 deletions(-)
+
+commit 54b00fade5f8a9e32e530d279c99c5fa003a226a
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:11:13 2020 +0200
+
+    uusi nimi tiedostolle
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5ee8203555f438957ae80bf2811b70a04b271fa8
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:09:53 2020 +0200
+
+    toinen.txt poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 8c760275df2c248d46942c8a6102f507857a15fd
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:06:44 2020 +0200
+
+    tekstin lisäys ja poisto
+
+ tiedosto.txt | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 51b78db20bf74d5a8cf183cdf6e18482b24a2ecc
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 14:04:32 2020 +0200
+
+    lisää tekstiä tiedostoon
+
+ tiedosto.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit f678c761014f15a4b81c74bc705c2d14748a4a14
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 13:56:45 2020 +0200
+
+    kansio stuff luotu
+
+ stuff/joku.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9a1316b7cde6a03389bea90e2aecae24f1b90d11
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 13:55:14 2020 +0200
+
+    muokkaukset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit dad105bf50fc79a289133cbdf37d0e0e26a2efaa
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 13:54:06 2020 +0200
+
+    luotu kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e2bc34ad599816047010b599b00052ea8afdb4aa
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 13:51:35 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit f3f0d02becef51b6446aa650b013f155132cd006
+Author: sallamarieini <sallamarieini@gmail.com>
+Date:   Sun Mar 15 13:49:35 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
