@@ -11,3 +11,7 @@
 ### Viikko 2
 
 [Testikattavuus screenshot](/laskarit/viikko2/Testikattavuus.png)
+
+## Harjoitustyö
+
+[Alustava vaatimusmäärittely](/dokumentointi/vaatimusmaarittely.md)
