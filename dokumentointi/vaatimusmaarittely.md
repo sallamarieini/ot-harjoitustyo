@@ -30,7 +30,7 @@ Sovelluksessa on alkuvaiheessa vain yhdenlaisia käyttäjiä eli tyypiltään n�
   
 * kaikista näkymistä on mahdollista palata aloitusvalikkoon
 
-### Jatkokehitysideoita
+## Jatkokehitysideoita
 
 * uusi käyttäjätyyppi, joka voi esimerkiksi poistaa käyttäjätunnuksia
 * käyttäjä voi muuttaa tietojaan, kuten salasanaa
