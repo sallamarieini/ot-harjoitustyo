@@ -14,4 +14,6 @@
 
 ## Harjoitustyö
 
+[Työaikakirjanpto](/dokumentointi/tyoaikakirjanpito.md)
+
 [Alustava vaatimusmäärittely](/dokumentointi/vaatimusmaarittely.md)
