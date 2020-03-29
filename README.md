@@ -18,6 +18,8 @@
 
 [Tehtävä 3, sekvenssikaavio](/laskarit/viikko3/SekvenssikaavioTehtava3.png)
 
+[Tehtävä 4, sekvenssikaavio](/laskarit/viikko3/SekvenssikaavioTehtava4.png)
+
 ## Harjoitustyö
 
 [Työaikakirjanpto](/dokumentointi/tyoaikakirjanpito.md)
