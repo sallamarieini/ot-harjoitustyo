@@ -16,6 +16,8 @@
 
 [Tehtävät 1 ja 2, luokkakaavio](/laskarit/viikko3/Monopoly1ja2.jpg)
 
+[Tehtävä 3, sekvenssikaavio](/laskarit/viikko3/SekvenssikaavioTehtava3.png)
+
 ## Harjoitustyö
 
 [Työaikakirjanpto](/dokumentointi/tyoaikakirjanpito.md)
