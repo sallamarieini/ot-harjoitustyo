@@ -12,6 +12,10 @@
 
 [Testikattavuus screenshot](/laskarit/viikko2/Testikattavuus.png)
 
+### Viikko 3
+
+[Tehtävät 1 ja 2, luokkakaavio](/laskarit/viikko3/Monopoly1ja2.jpg)
+
 ## Harjoitustyö
 
 [Työaikakirjanpto](/dokumentointi/tyoaikakirjanpito.md)
