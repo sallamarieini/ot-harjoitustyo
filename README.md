@@ -1,27 +1,28 @@
-# Ohjelmistotekniikka
+# Budjetointisovellus
 
-## Tehtävät
+Sovelluksen avulla käyttäjä voi pitää kirjaa oman henkilökohtaisen taloutensa menoista ja tuloista sekä tarkastella niitä. Useamman käyttäjän on mahdollista rekisteröityä sovellukseen.
 
-### Viikko 1
+## Huomio javan versioista
 
-[komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
+JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi toimia Helsingin yliopiston tietojenkäsittelytieteen laitoksen cubbli-Linuxeissa olevalla Java:n versiolla 11.
 
-[gitlog.txt](/laskarit/viikko1/gitlog.txt)
-
-### Viikko 2
-
-[Testikattavuus screenshot](/laskarit/viikko2/Testikattavuus.png)
-
-### Viikko 3
-
-[Tehtävät 1 ja 2, luokkakaavio](/laskarit/viikko3/Monopoly1ja2.jpg)
-
-[Tehtävä 3, sekvenssikaavio](/laskarit/viikko3/SekvenssikaavioTehtava3.png)
-
-[Tehtävä 4, sekvenssikaavio](/laskarit/viikko3/SekvenssikaavioTehtava4.png)
-
-## Harjoitustyö
-
-[Työaikakirjanpto](/dokumentointi/tyoaikakirjanpito.md)
+## Dokumentaatio
 
 [Alustava vaatimusmäärittely](/dokumentointi/vaatimusmaarittely.md)
+
+[Työaikakirjanpito](/dokumentointi/tyoaikakirjanpito.md)
+
+## Komentorivitoiminnot
+
+### Testaus
+
+Testit suoritetaan komennolla
+`mvn test`.
+
+Testikattavuusraportti luodaan komennolla `mvn jacoco:report`.
+
+Testikattavuusraporttia voi tarkastella avaamalla selaimella tiedoston *target/site/jacoco/index.html*.
+
+### Koodin suorittaminen
+
+Koodin voi suorittaa komentoriviltä komennolla `mvn compile exec:java -Dexec.mainClass=budget.main.Main`.
