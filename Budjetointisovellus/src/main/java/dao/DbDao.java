@@ -14,7 +14,8 @@ public class DbDao {
             
             Statement s = conn.createStatement();
             
-            s.execute("CREATE TABLE Events (id INTEGER PRIMARY KEY, date TEXT, event TEXT, type TEXT, "
+            s.execute("CREATE TABLE IF NOT EXISTS Events (id INTEGER PRIMARY KEY, "
+                    + "date TEXT, event TEXT, type TEXT, "
                     + "sum DOUBLE)");
             
         } catch (SQLException ex) {
