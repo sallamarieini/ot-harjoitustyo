@@ -12,21 +12,21 @@ Sovelluksessa on alkuvaiheessa vain yhdenlaisia käyttäjiä eli tyypiltään n�
 
 ### Ennen kirjautumista
 
-* uuden käyttäjätunnuksen luominen
+* uuden käyttäjätunnuksen luominen (tehty, alakohtaa ei tehty)
   * tunnuksen täytyy olla uniikki ja vähintään viiden merkin pituinen, mahdollisen salasanan tulee olla vähintään kahdeksan merkkiä pitkä
 
-* sovellukseen kirjautuminen
-  * käyttäjä kirjautuu sovellukseen syöttämällä käyttäjätunnuksen ja mahdollisesti salasanan
-  * jos käyttäjätunnus tai salasana on virheellinen, siitä annetaan käyttäjälle ilmoitus
+* sovellukseen kirjautuminen (tehty)
+  * käyttäjä kirjautuu sovellukseen syöttämällä käyttäjätunnuksen ja mahdollisesti salasanan (tehty)
+  * jos käyttäjätunnus tai salasana on virheellinen, siitä annetaan käyttäjälle ilmoitus (tehty)
   
 ### Kirjautumisen jälkeen
 
 * käyttäjälle avautuu kirjautumisen jälkeen aloitusvalikko, josta hän voi
-  * lisätä uuden tapahtuman
+  * lisätä uuden tapahtuman (tehty)
   * lisätä uuden kategorian tapahtumille
-  * listata tapahtumat
+  * listata tapahtumat (tehty, hyvin perus versio)
   * tarkastella tapahtumia kategorian mukaan, diagrammi
-  * kirjautua ulos
+  * kirjautua ulos (tehty, tässä tosin bugeja)
   
 * kaikista näkymistä on mahdollista palata aloitusvalikkoon
 
