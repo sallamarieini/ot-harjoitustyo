@@ -14,6 +14,10 @@ JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi to
 
 ## Komentorivitoiminnot
 
+### Koodin suorittaminen
+
+Koodin voi suorittaa komentoriviltä komennolla `mvn compile exec:java -Dexec.mainClass=budget.main.Main`.
+
 ### Testaus
 
 Testit suoritetaan komennolla
@@ -22,7 +26,3 @@ Testit suoritetaan komennolla
 Testikattavuusraportti luodaan komennolla `mvn jacoco:report`.
 
 Testikattavuusraporttia voi tarkastella avaamalla selaimella tiedoston *target/site/jacoco/index.html*.
-
-### Koodin suorittaminen
-
-Koodin voi suorittaa komentoriviltä komennolla `mvn compile exec:java -Dexec.mainClass=budget.main.Main`.
