@@ -4,6 +4,7 @@ package domain;
 import dao.EventDao;
 import java.sql.SQLException;
 import java.util.*;
+
 // Class for app logic related to event handling
 
 public class EventLogic {

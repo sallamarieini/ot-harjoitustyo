@@ -2,10 +2,12 @@
 package ui;
 
 import domain.EventLogic;
+import java.time.format.DateTimeFormatter;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -26,7 +28,9 @@ public class AddEventUi {
         Label headlineLabel = new Label("Lisää tapahtuma");
         
         Label dateLabel = new Label("Päivämäärä");
-        TextField dateInput = new TextField();
+        DatePicker datePicker = new DatePicker();
+        
+        //TextField dateInput = new TextField();
         
         Label eventLabel = new Label("Tapahtuman kuvaus (esim. ruoka)");
         TextField eventInput = new TextField();
@@ -44,12 +48,14 @@ public class AddEventUi {
         
         Label didItWorkLabel = new Label("");
         
-        components.getChildren().addAll(headlineLabel, dateLabel, dateInput, eventLabel,
+        components.getChildren().addAll(headlineLabel, dateLabel, datePicker, eventLabel,
                 eventInput, typeLabel, typeInput, sumLabel, sumInput, addButton, didItWorkLabel);
         
         addButton.setOnAction((event) -> {
             
-            String date = dateInput.getText();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            String date = formatter.format(datePicker.getValue());
+            //String date = dateInput.getText();
             String event2 = eventInput.getText();
             String type = typeInput.getValue().toString();
             Double sum = Double.parseDouble(sumInput.getText());

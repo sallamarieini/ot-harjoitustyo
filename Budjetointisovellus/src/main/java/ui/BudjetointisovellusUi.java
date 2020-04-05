@@ -13,6 +13,7 @@ public class BudjetointisovellusUi extends Application {
     
     private EventLogic eventLogic;
     
+    @Override
     public void init() throws Exception {
         
         DbEventDao eventDao = new DbEventDao();
@@ -29,9 +30,11 @@ public class BudjetointisovellusUi extends Application {
         
         Stage stage2 = new Stage();
         
+        stage2.setTitle("Budjetointisovellus");
         BudgetUi budgetUi = new BudgetUi(this.eventLogic, stage2);
         Scene budgetUiScene = budgetUi.getMainMenuUi(stage);
         
+        stage.setTitle("Budjetointisovellus");
         stage.setScene(budgetUiScene);
         stage.show();
         

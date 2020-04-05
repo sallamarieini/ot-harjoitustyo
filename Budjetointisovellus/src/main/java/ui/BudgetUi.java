@@ -48,6 +48,12 @@ public class BudgetUi {
             
         });
         
+        listEventsButton.setOnAction((event) -> {
+            ListEventsUi listEventsUi = new ListEventsUi(eventLogic);
+            stage2.setScene(listEventsUi.getListEventsUiScene(stage2));
+            stage2.show();
+        });
+        
         return outlook;
         
         //window.setScene(outlook);
