@@ -2,6 +2,7 @@
 package ui;
 
 import domain.EventLogic;
+import domain.UserLogic;
 import java.time.format.DateTimeFormatter;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -16,9 +17,11 @@ import javafx.stage.Stage;
 public class AddEventUi {
     
     private EventLogic eventLogic;
+    private UserLogic userLogic;
     
-    public AddEventUi(EventLogic eventLogic) {
+    public AddEventUi(EventLogic eventLogic, UserLogic userLogic) {
         this.eventLogic = eventLogic;
+        this.userLogic = userLogic;
     }
     
     public Scene getAddEventUiScene(Stage stage) {
@@ -60,7 +63,9 @@ public class AddEventUi {
             String type = typeInput.getValue().toString();
             Double sum = Double.parseDouble(sumInput.getText());
             
-            boolean value = this.eventLogic.addEvent(date, event2, type, sum);
+            String username = this.userLogic.getUser().getUsername();
+            
+            boolean value = this.eventLogic.addEvent(date, event2, type, sum, username);
             
             if (value == true) {
                 didItWorkLabel.setText("Tapahtuma lisätty.");

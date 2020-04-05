@@ -16,10 +16,10 @@ public class EventLogic {
     }
     
     // method for adding new event to database
-    public boolean addEvent(String date, String event, String type, double sum) {
+    public boolean addEvent(String date, String event, String type, double sum, String user) {
         
         try {
-            eventDao.create(new Event(date, event, type, sum));
+            eventDao.create(new Event(date, event, type, sum, user));
             
             return true;
         } catch (SQLException ex) {
@@ -28,9 +28,9 @@ public class EventLogic {
     }
     
     // method for getting all added events from database
-    public List<Event> getEvents() {
+    public List<Event> getEvents(String user) {
         try {
-            return eventDao.list();
+            return eventDao.list(user);
         } catch (SQLException ex) {
             return new ArrayList<>();
         }

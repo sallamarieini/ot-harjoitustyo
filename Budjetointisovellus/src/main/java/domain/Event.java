@@ -12,21 +12,24 @@ public class Event {
     private String event;
     private String type; // tulo vai meno
     private double sum;
+    private String user;
     
     // konstruktori testejä varten
-    public Event(int id, String date, String event, String type, double sum) {
+    public Event(int id, String date, String event, String type, double sum, String user) {
         this.id = id;
         this.date = date;
         this.event = event;
         this.type = type;
         this.sum = sum;
+        this.user = user;
     }
     
-    public Event(String date, String event, String type, double sum) {
+    public Event(String date, String event, String type, double sum, String user) {
         this.date = date;
         this.event = event;
         this.type = type;
         this.sum = sum;
+        this.user = user;
     }
     
     public String getDate() {
@@ -43,6 +46,10 @@ public class Event {
     
     public double getSum() {
         return this.sum;
+    }
+    
+    public String getUser() {
+        return this.user;
     }
     
     @Override

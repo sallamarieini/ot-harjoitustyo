@@ -16,12 +16,18 @@ public class DbDao {
             
             s.execute("CREATE TABLE IF NOT EXISTS Events (id INTEGER PRIMARY KEY, "
                     + "date TEXT, event TEXT, type TEXT, "
-                    + "sum DOUBLE)");
+                    + "sum DOUBLE, user TEXT)");
+            s.execute(usersTableCreate());
             
         } catch (SQLException ex) {
             System.out.println(ex);
         }
         
+    }
+    
+    public String usersTableCreate() {
+        return "CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY, "
+                + "name TEXT, username TEXT, password TEXT)";
     }
     
 }

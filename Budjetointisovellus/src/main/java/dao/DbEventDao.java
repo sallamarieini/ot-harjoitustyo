@@ -16,12 +16,13 @@ public class DbEventDao implements EventDao<Event> {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
             
             PreparedStatement p = conn.prepareStatement(
-                    "INSERT INTO Events (date, event, type, sum) VALUES (?,?,?,?)");
+                    "INSERT INTO Events (date, event, type, sum, user) VALUES (?,?,?,?,?)");
             
             p.setString(1, object.getDate());
             p.setString(2, object.getEvent());
             p.setString(3, object.getType());
             p.setDouble(4, object.getSum());
+            p.setString(5, object.getUser());
             
             p.executeUpdate();
             
@@ -35,18 +36,19 @@ public class DbEventDao implements EventDao<Event> {
     }
 
     @Override
-    public List<Event> list() throws SQLException {
+    public List<Event> list(String key) throws SQLException {
         
         Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
         
-        PreparedStatement p = conn.prepareStatement("SELECT * FROM Events");
+        PreparedStatement p = conn.prepareStatement("SELECT * FROM Events WHERE user = ?");
+        p.setString(1, key);
         
         ResultSet r = p.executeQuery();
         
         List<Event> events = new ArrayList<>();
         
         while (r.next()) {
-            events.add(new Event(r.getString("date"), r.getString("event"), r.getString("type"), r.getDouble("sum")));
+            events.add(new Event(r.getString("date"), r.getString("event"), r.getString("type"), r.getDouble("sum"), r.getString("user")));
         }
         
         r.close();
