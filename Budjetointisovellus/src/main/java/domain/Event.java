@@ -49,7 +49,7 @@ public class Event {
     public String toString() {
         
         if (this.type.equals("tulo")) {
-            return this.date + ", " + this.event + ", "+ this.type + ", " + this.sum + " €";
+            return this.date + ", " + this.event + ", " + this.type + ", " + this.sum + " €";
         } else {
             return this.date + ", " + this.event + ", " + this.type + ", -" + this.sum + " €";
         }

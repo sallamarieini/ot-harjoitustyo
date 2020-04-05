@@ -5,7 +5,7 @@ import domain.Event;
 import java.sql.*;
 import java.util.*;
 
-public class DbEventDao implements EventDao<Event>{
+public class DbEventDao implements EventDao<Event> {
     
     
     @Override
