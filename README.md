@@ -26,3 +26,9 @@ Testit suoritetaan komennolla
 Testikattavuusraportti luodaan komennolla `mvn jacoco:report`.
 
 Testikattavuusraporttia voi tarkastella avaamalla selaimella tiedoston *target/site/jacoco/index.html*.
+
+### Checkstyle
+
+Tiedostossa [checkstyle.xml](/Budjetointisovellus/checkstyle.xml) kirjatut tarkistukset ovat suoritettavissa komennolla `mvn jxr:jxr checkstyle:checkstyle`.
+
+Jos virheitä on, ne on nähtävissä avaamalla selaimessa tiedosto *target/site/checkstyle.html*.
