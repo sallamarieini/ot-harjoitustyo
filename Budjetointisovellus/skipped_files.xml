@@ -9,4 +9,6 @@
     <suppress files="ui.BudgetUi.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="ui.BudjetointisovellusUi.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="ui.ListEventsUi.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="ui.CreateNewUserUi.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="ui.LoginUi.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>

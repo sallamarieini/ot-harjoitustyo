@@ -32,27 +32,27 @@ public class DbUserDao implements UserDao<User, String> {
     }
     
     @Override
-    public User read(String object) throws SQLException{
-            
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
-            
-            PreparedStatement p = conn.prepareStatement(
-                    "SELECT name, username, password FROM Users WHERE username = ?");
-            p.setString(1, object);
-            
-            ResultSet r = p.executeQuery();
-            
-            if (!r.next()) {
-                return null;
-            }
-            
-            User user = new User(r.getString("name"), r.getString("username"), r.getString("password"));
-            
-            r.close();
-            p.close();
-            conn.close();
-            
-            return user;
+    public User read(String object) throws SQLException {
+
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
+
+        PreparedStatement p = conn.prepareStatement(
+                "SELECT name, username, password FROM Users WHERE username = ?");
+        p.setString(1, object);
+
+        ResultSet r = p.executeQuery();
+
+        if (!r.next()) {
+            return null;
+        }
+
+        User user = new User(r.getString("name"), r.getString("username"), r.getString("password"));
+
+        r.close();
+        p.close();
+        conn.close();
+
+        return user;
         
     }
     
