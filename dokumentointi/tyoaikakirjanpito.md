@@ -8,6 +8,7 @@
 | 05.04.2020        | 2 h            | Tapahtumien listaaminen ja checkstylen käyttöönotto |
 | 05.04.2020        | 5 h            | Kirjautumisominaisuus |
 | 06.04.2020        | 1 h            | Testejä lisätty, tutustuminen tietokannan testaukseen |
+| 06.04.2020        | 2 h            | Arkkitehtuurikuvaus, alustava kaavio |
 
-|Tunnit yhteensä|18 h    |
+|Tunnit yhteensä|20 h    |
 |:-------------:|--------|
