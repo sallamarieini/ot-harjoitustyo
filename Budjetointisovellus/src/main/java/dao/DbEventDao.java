@@ -7,13 +7,18 @@ import java.util.*;
 
 public class DbEventDao implements EventDao<Event> {
     
+    private String name;
+    
+    public DbEventDao(String name) {
+        this.name = name;
+    }
     
     @Override
     public void create(Event object) {
         
         try {
             
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
             
             PreparedStatement p = conn.prepareStatement(
                     "INSERT INTO Events (date, event, type, sum, user) VALUES (?,?,?,?,?)");
@@ -38,7 +43,7 @@ public class DbEventDao implements EventDao<Event> {
     @Override
     public List<Event> list(String key) throws SQLException {
         
-        Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
         
         PreparedStatement p = conn.prepareStatement("SELECT * FROM Events WHERE user = ?");
         p.setString(1, key);

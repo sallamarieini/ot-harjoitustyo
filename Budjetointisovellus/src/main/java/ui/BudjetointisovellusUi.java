@@ -19,11 +19,11 @@ public class BudjetointisovellusUi extends Application {
     @Override
     public void init() throws Exception {
         
-        DbEventDao eventDao = new DbEventDao();
-        DbUserDao userDao = new DbUserDao();
+        DbEventDao eventDao = new DbEventDao("budget.db");
+        DbUserDao userDao = new DbUserDao("budget.db");
         
         DbDao db = new DbDao();
-        db.createDatabase();
+        db.createDatabase("budget.db");
         
         this.eventLogic = new EventLogic(eventDao);
         this.userLogic = new UserLogic(userDao);

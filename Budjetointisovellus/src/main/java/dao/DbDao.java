@@ -7,10 +7,10 @@ import java.sql.*;
 
 public class DbDao {
     
-    public void createDatabase() {
+    public void createDatabase(String dbName) {
         
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:" + dbName);
             
             Statement s = conn.createStatement();
             

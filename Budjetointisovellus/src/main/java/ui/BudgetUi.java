@@ -34,7 +34,8 @@ public class BudgetUi {
         VBox layout = new VBox();
         layout.setSpacing(10);
         
-        Label welcomeLabel = new Label("Hei!");
+        String name = userLogic.getUser().getName();
+        Label welcomeLabel = new Label("Hei " + name + "!");
         
         Button addEventButton = new Button("Lisää uusi tapahtuma");
         Button listEventsButton = new Button("Näytä kaikki tapahtumat");
@@ -49,7 +50,7 @@ public class BudgetUi {
         layout.setAlignment(Pos.CENTER);
         layout.setPadding(new Insets(20, 20, 20, 20));
         
-        Scene outlook = new Scene(layout);
+        //Scene outlook = new Scene(layout);
         
         addEventButton.setOnAction((event) -> {
             
@@ -78,10 +79,14 @@ public class BudgetUi {
         
         logoutButton.setOnAction((event) -> {
             userLogic.logUserOut();
-            LoginUi loginUi = new LoginUi(userLogic, eventLogic, stage2);
+            //LoginUi loginUi = new LoginUi(userLogic, eventLogic, stage2);
             window.setScene(logoutMessage);
+            //window.setScene(loginUi.getLoginScene(stage2));
             window.show();
         });
+        //window.show();
+        
+        Scene outlook = new Scene(layout);
         
         return outlook;
         

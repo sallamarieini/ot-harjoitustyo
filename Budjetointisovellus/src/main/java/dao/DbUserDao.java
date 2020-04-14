@@ -5,13 +5,19 @@ import domain.User;
 import java.sql.*;
 
 public class DbUserDao implements UserDao<User, String> {
+    
+    private String name;
+    
+    public DbUserDao(String name) {
+        this.name = name;
+    }
 
     @Override
     public void create(User object) {
         
         try {
             
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
             
             PreparedStatement p = conn.prepareStatement(
                     "INSERT INTO Users (name, username, password) VALUES (?,?,?)");
@@ -34,7 +40,7 @@ public class DbUserDao implements UserDao<User, String> {
     @Override
     public User read(String object) throws SQLException {
 
-        Connection conn = DriverManager.getConnection("jdbc:sqlite:budget.db");
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
 
         PreparedStatement p = conn.prepareStatement(
                 "SELECT name, username, password FROM Users WHERE username = ?");
