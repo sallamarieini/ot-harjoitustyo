@@ -9,6 +9,7 @@
 | 05.04.2020        | 5 h            | Kirjautumisominaisuus |
 | 06.04.2020        | 1 h            | Testejä lisätty, tutustuminen tietokannan testaukseen |
 | 06.04.2020        | 2 h            | Arkkitehtuurikuvaus, alustava kaavio |
+| 14.04.2020        | 5 h            | Lisää testejä, tietokannan testausta |
 
-|Tunnit yhteensä|20 h    |
+|Tunnit yhteensä|25 h    |
 |:-------------:|--------|
