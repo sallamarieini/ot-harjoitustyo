@@ -10,6 +10,7 @@
 | 06.04.2020        | 1 h            | Testejä lisätty, tutustuminen tietokannan testaukseen |
 | 06.04.2020        | 2 h            | Arkkitehtuurikuvaus, alustava kaavio |
 | 14.04.2020        | 5 h            | Lisää testejä, tietokannan testausta |
+| 17.04.2020        | 3 h            | Visuaalisaatio tuloista ja menoista |
 
-|Tunnit yhteensä|25 h    |
+|Tunnit yhteensä|28 h    |
 |:-------------:|--------|
