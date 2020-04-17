@@ -25,5 +25,10 @@ public class FakeEventDao implements EventDao<Event> {
     public List list(String key) throws SQLException {
         return events.get(key);
     }
+
+    @Override
+    public void remove(int id) throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

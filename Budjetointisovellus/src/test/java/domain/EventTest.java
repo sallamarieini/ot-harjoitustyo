@@ -56,34 +56,5 @@ public class EventTest {
         assertEquals(right, event2.toString());
     }
     
-    @Test
-    public void getDateWorks() {
-        String right = "22.03.2020";
-        assertEquals(right, event.getDate());
-    }
-    
-    @Test
-    public void getTypeWorks() {
-        String right = "tulo";
-        assertEquals(right, event.getType());
-    }
-    
-    @Test
-    public void getSumWorks() {
-        double right = 20;
-        assertEquals(right, event.getSum(), 1);
-    }
-    
-    @Test
-    public void getUserWorks() {
-        String right = "Pekka";
-        assertEquals(right, event.getUser());
-    }
-    
-    @Test
-    public void getEventWorks() {
-        String right = "ruoka";
-        assertEquals(right, event.getEvent());
-    }
             
 }

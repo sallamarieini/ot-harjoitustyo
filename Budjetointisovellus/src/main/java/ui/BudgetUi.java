@@ -39,11 +39,13 @@ public class BudgetUi {
         
         Button addEventButton = new Button("Lisää uusi tapahtuma");
         Button listEventsButton = new Button("Näytä kaikki tapahtumat");
+        Button showGraphButton = new Button ("Vertaile tuloja ja menoja");
         Button logoutButton = new Button("Kirjaudu ulos");
         
         layout.getChildren().add(welcomeLabel);
         layout.getChildren().add(addEventButton);
         layout.getChildren().add(listEventsButton);
+        layout.getChildren().add(showGraphButton);
         layout.getChildren().add(logoutButton);
         
         layout.setPrefSize(500, 300);
@@ -63,6 +65,12 @@ public class BudgetUi {
         listEventsButton.setOnAction((event) -> {
             ListEventsUi listEventsUi = new ListEventsUi(eventLogic, userLogic);
             stage2.setScene(listEventsUi.getListEventsUiScene(stage2));
+            stage2.show();
+        });
+        
+        showGraphButton.setOnAction((event) -> {
+            EventGraphUi eventGraphUi = new EventGraphUi(eventLogic, userLogic);
+            stage2.setScene(eventGraphUi.getEventGraphUi(stage2));
             stage2.show();
         });
         

@@ -63,5 +63,20 @@ public class DbEventDao implements EventDao<Event> {
         return events;
         
     }
+
+    @Override
+    public void remove(int id) throws SQLException {
+        
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
+        
+        PreparedStatement p = conn.prepareStatement("DELETE FROM Events WHERE id = ?");
+        p.setInt(1, id);
+        
+        p.executeUpdate();
+        
+        p.close();
+        conn.close();
+        
+    }
     
 }
