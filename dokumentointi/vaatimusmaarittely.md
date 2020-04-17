@@ -26,6 +26,7 @@ Sovelluksessa on alkuvaiheessa vain yhdenlaisia käyttäjiä eli tyypiltään n�
   * lisätä uuden kategorian tapahtumille
   * listata tapahtumat (tehty, hyvin perus versio)
   * tarkastella tapahtumia kategorian mukaan, diagrammi
+  * tarkastella tuloja ja menoja, diagrammi (tehty)
   * kirjautua ulos (tehty, tässä tosin bugeja)
   
 * kaikista näkymistä on mahdollista palata aloitusvalikkoon
