@@ -14,6 +14,10 @@ JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi to
 
 [Työaikakirjanpito](/dokumentointi/tyoaikakirjanpito.md)
 
+## Releaset
+
+[1. release]()
+
 ## Komentorivitoiminnot
 
 ### Koodin suorittaminen
@@ -28,6 +32,13 @@ Testit suoritetaan komennolla
 Testikattavuusraportti luodaan komennolla `mvn jacoco:report`.
 
 Testikattavuusraporttia voi tarkastella avaamalla selaimella tiedoston *target/site/jacoco/index.html*.
+
+### Suoritettavan jarin generointi
+
+Jar on mahdollista generoida komennolla `mvn package`.
+
+Kyseinen komento generoi suoritettavan jar-tiedoston hakemistoon *target* nimellä *Budjetointisovellus-1.0-SNAPSHOT.jar*.
+Ohjelma on suoritettavissa komennolla `java -jar Budjetointisovellus-1.0-SNAPSHOT.jar`.
 
 ### Checkstyle
 
