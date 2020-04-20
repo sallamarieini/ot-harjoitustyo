@@ -11,7 +11,7 @@
 | 06.04.2020        | 2 h            | Arkkitehtuurikuvaus, alustava kaavio |
 | 14.04.2020        | 5 h            | Lisää testejä, tietokannan testausta |
 | 17.04.2020        | 3 h            | Visuaalisaatio tuloista ja menoista |
-| 19.04.2020        | 1 h            | Testejä ja suunnittelua |
+| 19.04.2020        | 1 h            | Testejä ja suunnittelua, release |
 
 |Tunnit yhteensä|29 h    |
 |:-------------:|--------|
