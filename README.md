@@ -16,7 +16,7 @@ JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi to
 
 ## Releaset
 
-[1. release]()
+[Viikko 5](https://github.com/sallamarieini/ot-harjoitustyo/releases)
 
 ## Komentorivitoiminnot
 
