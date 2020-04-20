@@ -2,12 +2,8 @@
 package domain;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -31,6 +27,7 @@ public class EventLogicTest {
         eventLogic.addEvent("14/04/2020", "auto", "meno", 158, "Jorma");
         eventLogic.addEvent("14/04/2020", "myynti", "tulo", 15, "Jorma");
         eventLogic.addEvent("12/04/2020", "lääkäri", "meno", 43, "Jorma");
+        eventLogic.addEvent("19/04/2020", "puutarha", "tulo", 1000, "Jorma");
         
         eventsPekka = eventDao.list("Pekka");
         eventsJorma = eventDao.list("Jorma");
@@ -39,7 +36,7 @@ public class EventLogicTest {
     
     @Test
     public void eventsAddedToUser() {
-        assertEquals(3, eventsJorma.size());
+        assertEquals(4, eventsJorma.size());
     }
     
     @Test
@@ -65,6 +62,21 @@ public class EventLogicTest {
     @Test
     public void getEventsNoUser() {
         assertEquals(null, eventLogic.getEvents(""));
+    }
+    
+    @Test
+    public void sumExpenceWorks() {
+        assertEquals(201, this.eventLogic.sumExpence(eventsJorma), 1);
+    }
+    
+    @Test
+    public void sumIncomesWorks() {
+        assertEquals(1015, this.eventLogic.sumIncome(eventsJorma), 1);
+    }
+    
+    @Test
+    public void saldoWorks() {
+        assertEquals(814, this.eventLogic.saldo(eventsJorma));
     }
 
 }
