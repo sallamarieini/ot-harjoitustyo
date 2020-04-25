@@ -12,16 +12,33 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Näytä kaikki tapahtumat-näkymän luova luokka.
+ * 
+ */
+
 public class ListEventsUi {
     
     private EventLogic eventLogic;
     private UserLogic userLogic;
     
+    /**
+     * Luokan konstruktori
+     * 
+     * @param eventLogic tapahtumien sovelluslogiikasta vastaava luokka
+     * @param userLogic käyttäjän sovelluslogiikasta vastaava luokka
+     */
     public ListEventsUi(EventLogic eventLogic, UserLogic userLogic) {
         this.eventLogic = eventLogic;
         this.userLogic = userLogic;
     }
     
+    /**
+     * Luo Näytä kaikki tapahtumat-näkymän
+     * 
+     * @param stage2 BudjetointisovellusUi-luokassa asetettu Stage-olio
+     * @return palauttaa näkymän Scene-olion
+     */
     public Scene getListEventsUiScene(Stage stage2) {
         
         ListView<Event> list = new ListView<>();

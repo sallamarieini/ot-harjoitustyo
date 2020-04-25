@@ -4,14 +4,29 @@ package dao;
 import domain.User;
 import java.sql.*;
 
+/**
+ * User-olioiden tietokantaan tallentamisesta vastaava luokka.
+ * 
+ */
+
 public class DbUserDao implements UserDao<User, String> {
     
     private String name;
     
+    /**
+     * Luokan konstruktori.
+     * 
+     * @param name config.properties tiedostossa määritelty tietokantatiedoston nimi
+     */
     public DbUserDao(String name) {
         this.name = name;
     }
 
+    /**
+     * Lisää User-olion tietokantaan.
+     * 
+     * @param object User-olio
+     */
     @Override
     public void create(User object) {
         
@@ -37,6 +52,13 @@ public class DbUserDao implements UserDao<User, String> {
         
     }
     
+    /**
+     * Lukee tietokannasta User-olion
+     * 
+     * @param object String käyttäjätunnus
+     * @return palauttaa tietokannasta luetun User-olion
+     * @throws SQLException Tietokanta heittää poikkeuksen virhetilanteessa
+     */
     @Override
     public User read(String object) throws SQLException {
 

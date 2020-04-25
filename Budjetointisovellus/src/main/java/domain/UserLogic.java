@@ -4,19 +4,35 @@ package domain;
 import dao.UserDao;
 import java.sql.SQLException;
 
-// Class for managing app logic related to users
+/**
+ * Käyttäjiin liittyvä sovelluslogiikka.
+ * 
+ */
 
 public class UserLogic {
     
     private UserDao userDao;
     private User user;
     
+    /**
+     * Luokan konstruktori.
+     * 
+     * @param userDao Luokka, joka tarjoaa Dao-ominaisuudet
+     */
     public UserLogic(UserDao userDao) {
         this.userDao = userDao;
         this.user = null;
     }
     
-    // method for adding a new user into database
+    /**
+     * Lisää käyttäjän tietokantaan
+     * 
+     * @param name käyttäjän nimi
+     * @param username käyttäjän käyttäjätunnus
+     * @param password käyttäjän salasana
+     * @return palauttaa true, jos lisääminen onnistuu ja palauttaa false, jos
+     * tapahtuu virhe
+     */
     public boolean addUser(String name, String username, String password) {
         try {
             userDao.create(new User(name, username, password));
@@ -28,7 +44,14 @@ public class UserLogic {
     }
     
     
-    // method for logging user in
+    /**
+     * Käyttäjän sisäänkirjautuminen
+     * 
+     * @param username käyttäjän käyttäjätunnus
+     * @param password käyttäjän salasana
+     * @return palauttaa true, jos sisäänkirjautuminen onnistuu ja false, jos
+     * tapahtuu virhe
+     */
     public boolean logUserIn(String username, String password) {
         
         try {
@@ -47,12 +70,18 @@ public class UserLogic {
         
     }
     
-    // method for logging user out
+    /**
+     * Kirjaa käyttäjän ulos
+     */
     public void logUserOut() {
         this.user = null;
     }
     
-    // method for getting user that is currently logged in
+    /**
+     * Hakee sisäänkirjautuneena olevan käyttäjän
+     * 
+     * @return palauttaa käyttäjän, joka on kirjautunut sisään
+     */
     public User getUser() {
         return this.user;
     }

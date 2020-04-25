@@ -14,6 +14,10 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Sovelluksen alustava ja käynnistävä luokka
+ * 
+ */
 
 public class BudjetointisovellusUi extends Application {
     
@@ -21,6 +25,11 @@ public class BudjetointisovellusUi extends Application {
     private UserLogic userLogic;
     private CategoryLogic categoryLogic;
     
+    /**
+     * Suorittaa tarvittavat alustukset.
+     * 
+     * @throws Exception Virheen tapahtuessa heittää poikkeuksen.
+     */
     @Override
     public void init() throws Exception {
         
@@ -56,6 +65,12 @@ public class BudjetointisovellusUi extends Application {
         
     }
     
+    /**
+     * Muodostaa sovelluksen ikkunan.
+     * 
+     * @param stage
+     * @throws Exception 
+     */
     @Override
     public void start(Stage stage) throws Exception {
         
@@ -78,6 +93,11 @@ public class BudjetointisovellusUi extends Application {
         
     }
     
+    /**
+     * Käynnistää sovelluksen.
+     * 
+     * @param args 
+     */
     public static void main(String[] args) {
         launch(args);
     }

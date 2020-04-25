@@ -7,17 +7,34 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-// Class for app logic related to event handling
+/**
+ * Tapahtumiin liittyvä sovelluslogiikka
+ * 
+ */
 
 public class EventLogic {
     
     private EventDao eventDao;
     
+    /**
+     * Luokan konstruktori
+     * 
+     * @param eventDao Luokka, joka tarjoaa Dao-ominaisuudet
+     */
     public EventLogic(EventDao eventDao) {
         this.eventDao = eventDao;
     }
     
-    // method for adding new event to database
+    /**
+     * Lisää uuden tapahtuman tietokantaan
+     * 
+     * @param date tapahtuman päivämäärä
+     * @param event tapahtuman kategoria
+     * @param type tapahtuman tyyppi
+     * @param sum tapahtuman summa
+     * @param user tapahtumaan liittyvä käyttäjä
+     * @return palauttaa true, jos lisääminen onnistui, virheen tapahtuessa false
+     */
     public boolean addEvent(String date, String event, String type, double sum, String user) {
         
         try {
@@ -29,7 +46,13 @@ public class EventLogic {
         }
     }
     
-    // method for getting all added events from database
+    /**
+     * Listaa tiettyyn käyttäjään liittyvät tapahtumat tietokannasta
+     * 
+     * @param user haettaviin tapahtumiin liittyvä käyttäjä
+     * @return palauttaa tapahtumat sisältävän listan, jos tapahtuu virhe,
+     * palauttaa tyhjän listan
+     */
     public List<Event> getEvents(String user) {
         try {
             return eventDao.list(user);
@@ -38,7 +61,13 @@ public class EventLogic {
         }
     }
     
-    // method for removing an event
+    /**
+     * Poistaa Event-olion
+     * 
+     * @param id poistettavan tapahtuman pääavain
+     * @return palauttaa true, jos tapahtuma on poistettu onnistuneesti,
+     * virheen tapahtuessa false
+     */
     public boolean removeEvent(int id) {
         try {
             eventDao.remove(id);
@@ -48,7 +77,12 @@ public class EventLogic {
         }
     }
     
-    // method for getting the sum of expences
+    /**
+     * Laskee menojen summan
+     * 
+     * @param list tapahtumat sisältävä lista
+     * @return palauttaa menojen summan
+     */
     public double sumExpence(List<Event> list) {
         
         double sum = 0.0;
@@ -63,7 +97,12 @@ public class EventLogic {
         
     }
     
-    // method for getting the sum on incomes
+    /**
+     * Laskee tulojen summan
+     * 
+     * @param list tapahtumat sisältävät lista
+     * @return palauttaa tulojen summan
+     */
     public double sumIncome(List<Event> list) {
         
         double sum = 0.0;
@@ -78,7 +117,12 @@ public class EventLogic {
         
     }
     
-    // method for calculating saldo
+    /**
+     * Laskee tapahtumien kokonaissaldon
+     * 
+     * @param list tapahtumat sisältävä lista
+     * @return palauttaa saldon
+     */
     public long saldo(List<Event> list) {
         return Math.round(sumIncome(list) - sumExpence(list));
     }

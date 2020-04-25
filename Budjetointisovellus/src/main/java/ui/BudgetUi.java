@@ -13,7 +13,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-// Layout for main view
+/**
+ * Luokka muodostaa sovelluksen päävalikon
+ * 
+ */
 
 public class BudgetUi {
     
@@ -23,6 +26,15 @@ public class BudgetUi {
     private Stage stage2;
     private Scene loginUi;
     
+    /**
+     * Luokan konstruktori
+     * 
+     * @param userLogic käyttäjän sovelluslogiikasta vastaava luokka
+     * @param eventLogic tapahtumien sovelluslogiikasta vastaava luokka
+     * @param categoryLogic kategorioiden sovelluslogiikasta vastaava luokka
+     * @param loginUi BudjetointisovellusUi-luokassa asetettu Scene-olio
+     * @param stage2 Stage-olio, jolla luodaan alinäkymä
+     */
     public BudgetUi(UserLogic userLogic, EventLogic eventLogic, CategoryLogic categoryLogic, Scene loginUi, Stage stage2) {
         this.userLogic = userLogic;
         this.eventLogic = eventLogic;
@@ -31,8 +43,13 @@ public class BudgetUi {
         this.loginUi = loginUi;
     }
 
-    //@Override
-    public Scene getMainMenuUi(Stage window) throws Exception {
+    /**
+     * Luo sovelluksen päävalikon.
+     * 
+     * @param window BudjetointisovellusUi-luokassa asetettu Stage-olio
+     * @return palauttaa päänäkymän, Scene-olio
+     */
+    public Scene getMainMenuUi(Stage window) {
         
         VBox layout = new VBox();
         layout.setSpacing(10);
@@ -113,6 +130,11 @@ public class BudgetUi {
         //window.show();
     }
     
+    /**
+     * Käyttäjän uloskirjaaminen.
+     * 
+     * @param window Stage-olio 
+     */
     public void logOut(Stage window) {
         this.userLogic.logUserOut();
         window.setScene(this.loginUi);

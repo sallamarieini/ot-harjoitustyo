@@ -16,16 +16,33 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Tulojen ja menojen vertailun visuaalisaatiosta vastaava luokka
+ * 
+ */
+
 public class EventGraphUi {
     
     private EventLogic eventLogic;
     private UserLogic userLogic;
     
+    /**
+     * Luokan konstruktori.
+     * 
+     * @param eventLogic tapahtumien sovelluslogiikasta vastaava luokka
+     * @param userLogic käyttäjän sovelluslogiikasta vastaava luokka
+     */
     public EventGraphUi(EventLogic eventLogic, UserLogic userLogic) {
         this.eventLogic = eventLogic;
         this.userLogic = userLogic;
     }
     
+    /**
+     * Luo näkymän, jossa on visualisaatio tuloista ja menoista
+     * 
+     * @param stage2 BudjetointisovellusUi-luokassa annettu Stage-olio
+     * @return palauttaa näkymän Scene-olion
+     */
     public Scene getEventGraphUi(Stage stage2) {
         
         Label text = new Label("Tulojen ja menojen vertailu");

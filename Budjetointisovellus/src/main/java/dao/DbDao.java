@@ -3,10 +3,18 @@ package dao;
 
 import java.sql.*;
 
-// Create database and the tables needed
+/**
+ * Luokka luo tietokannan ja tietokannan taulut.
+ * 
+ */
 
 public class DbDao {
     
+    /**
+     * Luo tietokannan ja sen taulut.
+     * 
+     * @param dbName config.properties tiedostossa annettu tietokannan nimi
+     */
     public void createDatabase(String dbName) {
         
         try {
@@ -26,11 +34,21 @@ public class DbDao {
         
     }
     
+    /**
+     * Users-taulu.
+     * 
+     * @return palauttaa Users-taulun luomiseen tarvittavan sql-kyselyn
+     */
     public String usersTableCreate() {
         return "CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY, "
                 + "name TEXT, username TEXT, password TEXT)";
     }
     
+    /**
+     * Categories-taulu.
+     * 
+     * @return palauttaa Categories-taulun luomiseen tarvittavan sql-kyselyn
+     */
     public String categoriesTable() {
         return "CREATE TABLE IF NOT EXISTS Categories (id INTEGER PRIMARY KEY, "
                 + "category TEXT)";

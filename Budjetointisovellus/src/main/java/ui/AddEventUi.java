@@ -19,18 +19,36 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Luokka vastaa lisää tapahtuma-näkymästä
+ * 
+ */
+
 public class AddEventUi {
     
     private EventLogic eventLogic;
     private UserLogic userLogic;
     private CategoryLogic categoryLogic;
     
+    /**
+     * Luokan konstruktori.
+     * 
+     * @param eventLogic tapahtumien sovelluslogiikasta vastaava luokka
+     * @param userLogic käyttäjän sovelluslogiikasta vastaava luokka
+     * @param categoryLogic kategorioiden sovelluslogiikasta vastaava luokka
+     */
     public AddEventUi(EventLogic eventLogic, UserLogic userLogic, CategoryLogic categoryLogic) {
         this.eventLogic = eventLogic;
         this.userLogic = userLogic;
         this.categoryLogic = categoryLogic;
     }
     
+    /**
+     * Luo lisää tapahtuma-näkymän
+     * 
+     * @param stage BudjetointisovellusUi-luokassa asetettu Stage-olio
+     * @return palauttaa lisää tapahtuma-näkymän Scene-olion
+     */
     public Scene getAddEventUiScene(Stage stage) {
         
         VBox components = new VBox();

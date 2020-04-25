@@ -16,20 +16,41 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Luo sovelluksen kirjautumisnäkymän
+ * 
+ */
+
 public class LoginUi {
     
     private Scene menu;
     private UserLogic userLogic;
     
+    /**
+     * Luokan konstruktori.
+     * 
+     * @param userLogic käyttäjän sovelluslogiikasta vastaava luokka
+     */
     public LoginUi(UserLogic userLogic) {
         this.userLogic = userLogic;
         menu = null;
     }
     
+    /**
+     * Asettaa sovelluksen päävalikon
+     * 
+     * @param menu päävalikon Scene-olio
+     */
     public void setMenuScene(Scene menu) {
         this.menu = menu;
     }
     
+    /**
+     * Muodostaa kirjautumisnäkymän.
+     * 
+     * @param stage BudjetointisovellusUi-luokassa luotu Stage-olio
+     * @return palauttaa näkymän Scene-olion
+     */
     public Scene getLoginScene(Stage stage) {
         VBox layout = new VBox();
         
