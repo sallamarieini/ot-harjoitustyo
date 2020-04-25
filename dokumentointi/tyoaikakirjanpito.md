@@ -14,6 +14,7 @@
 | 19.04.2020        | 1 h            | Testejä ja suunnittelua, release |
 | 24.04.2020        | 5 h            | Konfiguraatiotiedostot ja kategoriat |
 | 25.04.2020        | 5 h            | Käyttöliittymän bugin korjausta ja suunnittelua |
+| 25.04.2020        | 2 h            | Testejä lisätty |
 
-|Tunnit yhteensä|39 h    |
+|Tunnit yhteensä|41 h    |
 |:-------------:|--------|
