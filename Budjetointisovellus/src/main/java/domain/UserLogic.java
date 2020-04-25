@@ -47,7 +47,6 @@ public class UserLogic {
         
     }
     
-    
     // method for logging user out
     public void logUserOut() {
         this.user = null;
