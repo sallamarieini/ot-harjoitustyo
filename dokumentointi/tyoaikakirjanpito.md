@@ -15,6 +15,7 @@
 | 24.04.2020        | 5 h            | Konfiguraatiotiedostot ja kategoriat |
 | 25.04.2020        | 5 h            | Käyttöliittymän bugin korjausta ja suunnittelua |
 | 25.04.2020        | 2 h            | Testejä lisätty |
+| 25.04.2020        | 3 h            | JavaDoc |
 
-|Tunnit yhteensä|41 h    |
+|Tunnit yhteensä|44 h    |
 |:-------------:|--------|
