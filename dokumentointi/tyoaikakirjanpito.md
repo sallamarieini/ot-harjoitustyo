@@ -12,6 +12,8 @@
 | 14.04.2020        | 5 h            | Lisää testejä, tietokannan testausta |
 | 17.04.2020        | 3 h            | Visuaalisaatio tuloista ja menoista |
 | 19.04.2020        | 1 h            | Testejä ja suunnittelua, release |
+| 24.04.2020        | 5 h            | Konfiguraatiotiedostot ja kategoriat |
+| 25.04.2020        | 5 h            | Käyttöliittymän bugin korjausta ja suunnittelua |
 
-|Tunnit yhteensä|29 h    |
+|Tunnit yhteensä|39 h    |
 |:-------------:|--------|
