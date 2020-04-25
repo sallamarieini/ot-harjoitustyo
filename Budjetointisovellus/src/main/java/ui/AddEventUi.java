@@ -1,9 +1,14 @@
 
 package ui;
 
+import domain.Category;
+import domain.CategoryLogic;
 import domain.EventLogic;
 import domain.UserLogic;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -18,10 +23,12 @@ public class AddEventUi {
     
     private EventLogic eventLogic;
     private UserLogic userLogic;
+    private CategoryLogic categoryLogic;
     
-    public AddEventUi(EventLogic eventLogic, UserLogic userLogic) {
+    public AddEventUi(EventLogic eventLogic, UserLogic userLogic, CategoryLogic categoryLogic) {
         this.eventLogic = eventLogic;
         this.userLogic = userLogic;
+        this.categoryLogic = categoryLogic;
     }
     
     public Scene getAddEventUiScene(Stage stage) {
@@ -35,8 +42,14 @@ public class AddEventUi {
         
         //TextField dateInput = new TextField();
         
-        Label eventLabel = new Label("Tapahtuman kuvaus (esim. ruoka)");
-        TextField eventInput = new TextField();
+        Label eventLabel = new Label("Kategoria");
+        ComboBox eventInput = new ComboBox();
+        //TextField eventInput = new TextField();
+        
+        List<Category> list = this.categoryLogic.getAllCategories();
+        ObservableList<Category> cList = FXCollections.observableArrayList(list);
+        eventInput.setItems(cList);
+        eventInput.getSelectionModel().selectFirst();
         
         Label typeLabel = new Label("Tulo tai meno");
         ComboBox typeInput = new ComboBox();
@@ -59,7 +72,7 @@ public class AddEventUi {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             String date = formatter.format(datePicker.getValue());
             //String date = dateInput.getText();
-            String event2 = eventInput.getText();
+            String event2 = eventInput.getValue().toString();
             String type = typeInput.getValue().toString();
             Double sum = Double.parseDouble(sumInput.getText());
             

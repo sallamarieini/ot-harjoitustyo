@@ -1,6 +1,7 @@
 
 package ui;
 
+import domain.CategoryLogic;
 import domain.EventLogic;
 import domain.UserLogic;
 import javafx.application.Application;
@@ -18,14 +19,16 @@ public class BudgetUi {
     
     private EventLogic eventLogic;
     private UserLogic userLogic;
-    //private Scene loginScene;
+    private CategoryLogic categoryLogic;
     private Stage stage2;
+    private Scene loginUi;
     
-    public BudgetUi(UserLogic userLogic, EventLogic eventLogic, Stage stage2) {
+    public BudgetUi(UserLogic userLogic, EventLogic eventLogic, CategoryLogic categoryLogic, Scene loginUi, Stage stage2) {
         this.userLogic = userLogic;
         this.eventLogic = eventLogic;
-        //this.loginScene = loginScene;
+        this.categoryLogic = categoryLogic;
         this.stage2 = stage2;
+        this.loginUi = loginUi;
     }
 
     //@Override
@@ -34,8 +37,11 @@ public class BudgetUi {
         VBox layout = new VBox();
         layout.setSpacing(10);
         
-        String name = userLogic.getUser().getName();
-        Label welcomeLabel = new Label("Hei " + name + "!");
+        String name = "";
+        //name = this.userLogic.getUser().getName();
+        //String name = "Pekka";
+        //Label welcomeLabel = new Label("Hei " + name + "!");
+        Label welcomeLabel = new Label("Tervetuloa!");
         
         Button addEventButton = new Button("Lisää uusi tapahtuma");
         Button listEventsButton = new Button("Näytä kaikki tapahtumat");
@@ -56,7 +62,7 @@ public class BudgetUi {
         
         addEventButton.setOnAction((event) -> {
             
-            AddEventUi addEventUi = new AddEventUi(eventLogic, userLogic);
+            AddEventUi addEventUi = new AddEventUi(eventLogic, userLogic, categoryLogic);
             stage2.setScene(addEventUi.getAddEventUiScene(stage2));
             stage2.show();
             
@@ -74,7 +80,7 @@ public class BudgetUi {
             stage2.show();
         });
         
-        Label logoutM = new Label("Olet kirjautunut ulos.");
+        /*Label logoutM = new Label("Olet kirjautunut ulos.");
         Label logoutM2 = new Label("Sulje kaikki ikkunat.");
         
         VBox comp = new VBox();
@@ -83,16 +89,20 @@ public class BudgetUi {
         comp.setAlignment(Pos.CENTER);
         comp.setPadding(new Insets(20, 20, 20, 20));
         
-        Scene logoutMessage = new Scene(comp);
+        Scene logoutMessage = new Scene(comp);*/
+        
+        ///logoutButton.setOnAction((event) -> {
+            ///userLogic.logUserOut();
+            //LoginUi loginUi = new LoginUi(userLogic, eventLogic, stage2);
+            ///window.setScene(logoutMessage);
+            //window.setScene(loginUi.getLoginScene(stage2));
+            ///window.show();
+        ///});
+        //window.show();
         
         logoutButton.setOnAction((event) -> {
-            userLogic.logUserOut();
-            //LoginUi loginUi = new LoginUi(userLogic, eventLogic, stage2);
-            window.setScene(logoutMessage);
-            //window.setScene(loginUi.getLoginScene(stage2));
-            window.show();
+            logOut(window);
         });
-        //window.show();
         
         Scene outlook = new Scene(layout);
         
@@ -101,6 +111,11 @@ public class BudgetUi {
         //window.setScene(outlook);
         
         //window.show();
+    }
+    
+    public void logOut(Stage window) {
+        this.userLogic.logUserOut();
+        window.setScene(this.loginUi);
     }
         
     /*public static void main(String[] args) {

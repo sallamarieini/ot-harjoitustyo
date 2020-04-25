@@ -1,5 +1,5 @@
 
-package ui;
+/*package ui;
 
 import domain.UserLogic;
 import javafx.geometry.Insets;
@@ -62,4 +62,4 @@ public class CreateNewUserUi {
         
     }
     
-}
+}*/

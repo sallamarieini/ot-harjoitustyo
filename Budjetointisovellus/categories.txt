@@ -1,0 +1,13 @@
+a=elintarvikkeet
+b=ravintolat
+c=matkustaminen
+d=herkut
+e=opiskelijatapahtumat
+f=terveys
+g=viihde
+h=laskut
+i=vuokra
+j=opintotuki
+k=palkka
+l=muu meno
+m=muu tulo
