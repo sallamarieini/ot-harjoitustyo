@@ -27,7 +27,7 @@ Sovelluksessa on alkuvaiheessa vain yhdenlaisia k채ytt채ji채 eli tyypilt채채n n�
   * listata tapahtumat (tehty, hyvin perus versio)
   * tarkastella tapahtumia kategorian mukaan, diagrammi
   * tarkastella tuloja ja menoja, diagrammi (tehty)
-  * kirjautua ulos (tehty, t채ss채 tosin bugeja)
+  * kirjautua ulos (tehty)
   
 * kaikista n채kymist채 on mahdollista palata aloitusvalikkoon
 
