@@ -16,6 +16,7 @@
 | 25.04.2020        | 5 h            | Käyttöliittymän bugin korjausta ja suunnittelua |
 | 25.04.2020        | 2 h            | Testejä lisätty |
 | 25.04.2020        | 3 h            | JavaDoc |
+| 26.04.2020        | 3 h            | Visualisaatio tuloista ja menoista kategorioittain |
 
-|Tunnit yhteensä|44 h    |
+|Tunnit yhteensä|47 h    |
 |:-------------:|--------|
