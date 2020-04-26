@@ -127,4 +127,27 @@ public class EventLogic {
         return Math.round(sumIncome(list) - sumExpence(list));
     }
     
+    /**
+     * Laskee tapahtumien yhteissuman kategoriaa kohti
+     * 
+     * @param events tapahtuma-olit sisältävä lista
+     * @return palauttaa HashMapin, jossa on yhteissummat kategorioittain, avaimena
+     * on kategoria
+     */
+    public HashMap<String, Double> categoriesSum(List<Event> events) {
+        
+        HashMap<String, Double> list = new HashMap<>();
+        
+        for (Event e: events) {
+            if (e.getType().equals("meno")) {
+                list.put(e.getEvent(), list.getOrDefault(e.getEvent(), 0.0) - e.getSum());
+            } else {
+                list.put(e.getEvent(), list.getOrDefault(e.getEvent(), 0.0) + e.getSum());
+            }
+        }
+        
+        return list;
+        
+    }
+    
 }
