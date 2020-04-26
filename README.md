@@ -40,6 +40,10 @@ Jar on mahdollista generoida komennolla `mvn package`.
 Kyseinen komento generoi suoritettavan jar-tiedoston hakemistoon *target* nimellä *Budjetointisovellus-1.0-SNAPSHOT.jar*.
 Ohjelma on suoritettavissa komennolla `java -jar Budjetointisovellus-1.0-SNAPSHOT.jar`.
 
+### JavaDoc
+
+JavaDoc on generoitavissa komennolla `mvn javadoc:javadoc`. JavaDocia voi tarkastella selaimella avaamalla tiedoston *target/site/apidocs/index.html*.
+
 ### Checkstyle
 
 Tiedostossa [checkstyle.xml](/Budjetointisovellus/checkstyle.xml) kirjatut tarkistukset ovat suoritettavissa komennolla `mvn jxr:jxr checkstyle:checkstyle`.
