@@ -17,7 +17,7 @@
 | 25.04.2020        | 2 h            | Testejä lisätty |
 | 25.04.2020        | 3 h            | JavaDoc |
 | 26.04.2020        | 3 h            | Visualisaatio tuloista ja menoista kategorioittain |
-| 28.04.2020        | 3 h            | Arkkitehtuurikuvauksen ja käyttöohjeen tekemistä |
+| 27.04.2020        | 3 h            | Arkkitehtuurikuvauksen ja käyttöohjeen tekemistä |
 
 |Tunnit yhteensä|50 h    |
 |:-------------:|--------|
