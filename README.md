@@ -8,6 +8,8 @@ JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi to
 
 ## Dokumentaatio
 
+[Alustava käyttöohje](/dokumentointi/kayttoohje.md)
+
 [Alustava vaatimusmäärittely](/dokumentointi/vaatimusmaarittely.md)
 
 [Arkkitehtuurikuvaus](/dokumentointi/arkkitehtuuri.md)
