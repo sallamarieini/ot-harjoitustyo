@@ -21,11 +21,11 @@ Sovelluksessa on alkuvaiheessa vain yhdenlaisia käyttäjiä eli tyypiltään n�
   
 ### Kirjautumisen jälkeen
 
-* käyttäjälle avautuu kirjautumisen jälkeen aloitusvalikko, josta hän voi
+* käyttäjälle avautuu kirjautumisen jälkeen aloitusvalikko (tehty), josta hän voi
   * lisätä uuden tapahtuman (tehty)
   * lisätä uuden kategorian tapahtumille
   * listata tapahtumat (tehty, hyvin perus versio)
-  * tarkastella tapahtumia kategorian mukaan, diagrammi
+  * tarkastella tapahtumia kategorian mukaan, diagrammi (tehty)
   * tarkastella tuloja ja menoja, diagrammi (tehty)
   * kirjautua ulos (tehty)
   
