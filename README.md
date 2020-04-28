@@ -18,7 +18,9 @@ JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi to
 
 ## Releaset
 
-[Viikko 5](https://github.com/sallamarieini/ot-harjoitustyo/releases)
+[Viikko 5](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/viikko5)
+
+[Viikko 6](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
 
