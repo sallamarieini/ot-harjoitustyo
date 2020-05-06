@@ -19,6 +19,7 @@
 | 26.04.2020        | 3 h            | Visualisaatio tuloista ja menoista kategorioittain |
 | 27.04.2020        | 3 h            | Arkkitehtuurikuvauksen ja käyttöohjeen tekemistä |
 | 28.04.2020        | 1 h            | README.md kuntoon, release |
+| 06.05.2020        | 3 h            | Virheenkäsittelyä, suunnittelua |
 
-|Tunnit yhteensä|51 h    |
+|Tunnit yhteensä|54 h    |
 |:-------------:|--------|
