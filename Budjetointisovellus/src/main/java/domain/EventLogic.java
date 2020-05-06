@@ -150,4 +150,21 @@ public class EventLogic {
         
     }
     
+    /**
+     * Tarkistaa, onko syötetty rahasumma tyypiltään double
+     *
+     * @param sum rahasumma
+     * @return palauttaa true, jos rahasumma on double, muuten false
+     */
+    public boolean isSumDouble(String sum) {
+
+        try {
+            Double.parseDouble(sum);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+
+    }
+    
 }

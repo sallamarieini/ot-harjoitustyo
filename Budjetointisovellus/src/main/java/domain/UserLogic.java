@@ -35,9 +35,12 @@ public class UserLogic {
      */
     public boolean addUser(String name, String username, String password) {
         try {
-            userDao.create(new User(name, username, password));
+            if (userDao.read(username) == null) {
+                userDao.create(new User(name, username, password));
+                return true;
+            }
             
-            return true;
+            return false;
         } catch (SQLException ex) {
             return false;
         }
@@ -84,6 +87,38 @@ public class UserLogic {
      */
     public User getUser() {
         return this.user;
+    }
+    
+    /**
+     * Tarkistaa, onko käyttäjänimi riittävän pitkä
+     * 
+     * @param username käyttäjätunnus
+     * @return palauttaa true, jos käyttäjätunnuksen pituus on vähintään 3 merkkiä,
+     * muuten false
+     */
+    public boolean usernameLength(String username) {
+        return username.length() >= 3;
+    }
+    
+    /**
+     * Tarkistaa salasanan pituuden
+     * 
+     * @param password salasana
+     * @return palauttaa true, jos salasanan pituus on vähintään 3 merkkiä,
+     * muuten false
+     */
+    public boolean passwordLength(String password) {
+        return password.length() >= 5;
+    }
+    
+    /**
+     * Tarkistaa, että nimikenttä ei ole tyhjä
+     * 
+     * @param name käyttäjän nimi
+     * @return palauttaa true, jos kenttä ei ole tyhjä, muuten false
+     */
+    public boolean nameNotEmpty(String name) {
+        return name.length() != 0;
     }
     
 }

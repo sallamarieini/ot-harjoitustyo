@@ -27,11 +27,10 @@ public class DbEventDao implements EventDao<Event> {
      * Tallentaa Event-olion tietokantaan.
      * 
      * @param object Event-olio
+     * @throws SQLException Tietokanta heittää poikkeuksen virhetilanteessa
      */
     @Override
-    public void create(Event object) {
-        
-        try {
+    public void create(Event object) throws SQLException {
             
             Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
             
@@ -49,9 +48,6 @@ public class DbEventDao implements EventDao<Event> {
             p.close();
             conn.close();
             
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
         
     }
 

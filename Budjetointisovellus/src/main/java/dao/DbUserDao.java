@@ -26,11 +26,10 @@ public class DbUserDao implements UserDao<User, String> {
      * Lisää User-olion tietokantaan.
      * 
      * @param object User-olio
+     * @throws SQLException Tietokanta heittää poikkeuksen virhetilanteessa
      */
     @Override
-    public void create(User object) {
-        
-        try {
+    public void create(User object) throws SQLException {
             
             Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
             
@@ -45,10 +44,6 @@ public class DbUserDao implements UserDao<User, String> {
             
             p.close();
             conn.close();
-            
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
         
     }
     

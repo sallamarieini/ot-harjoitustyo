@@ -91,7 +91,7 @@ public class LoginUi {
         
         layout2.getChildren().addAll(headlineLabel, nameLabel, nameField, usernameLabel2, 
                 usernameField2, passwordLabel2, passwordField2, registerButton2, didItWorkLabel, previous);
-        layout2.setPrefSize(500, 300);
+        layout2.setPrefSize(500, 400);
         layout2.setAlignment(Pos.CENTER);
         layout2.setPadding(new Insets(20, 20, 20, 20));
         layout2.setSpacing(10);
@@ -127,15 +127,21 @@ public class LoginUi {
             String name = nameField.getText();
             String username = usernameField2.getText();
             String password = passwordField2.getText();
-            
-            boolean value = this.userLogic.addUser(name, username, password);
-            
-            if (value == true) {
-                didItWorkLabel.setText("Rekisteröityminen onnistui.");
+            if (this.userLogic.usernameLength(username) == true && this.userLogic.passwordLength(password) == true && this.userLogic.nameNotEmpty(name) == true) {
+                
+                boolean value = this.userLogic.addUser(name, username, password);
+
+                if (value == true) {
+                    didItWorkLabel.setText("Rekisteröityminen onnistui.");
+                } else {
+                    didItWorkLabel.setText("Virhe. Käyttäjätunnus on jo käytössä. Valitse uusi käyttäjätunnus.");
+                }
                 
             } else {
-                didItWorkLabel.setText("Virhe. Rekisteröityminen epäonnistui.");
+                didItWorkLabel.setText("Käyttäjätunnuksen ja salasanan tulee olla vähintään 3 merkkiä, \n"
+                        + "ja nimen tulee olla vähintään 1 merkin pituinen.");
             }
+            
         });
         
         previous.setOnAction((event) -> { 

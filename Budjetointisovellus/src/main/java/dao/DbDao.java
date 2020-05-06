@@ -41,7 +41,7 @@ public class DbDao {
      */
     public String usersTableCreate() {
         return "CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY, "
-                + "name TEXT, username TEXT, password TEXT)";
+                + "name TEXT, username TEXT UNIQUE, password TEXT)";
     }
     
     /**
@@ -51,7 +51,7 @@ public class DbDao {
      */
     public String categoriesTable() {
         return "CREATE TABLE IF NOT EXISTS Categories (id INTEGER PRIMARY KEY, "
-                + "category TEXT)";
+                + "category TEXT UNIQUE)";
     }
     
 }

@@ -5,6 +5,7 @@ import domain.Category;
 import domain.CategoryLogic;
 import domain.EventLogic;
 import domain.UserLogic;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javafx.collections.FXCollections;
@@ -56,7 +57,8 @@ public class AddEventUi {
         Label headlineLabel = new Label("Lisää tapahtuma");
         
         Label dateLabel = new Label("Päivämäärä");
-        DatePicker datePicker = new DatePicker();
+        DatePicker datePicker = new DatePicker(LocalDate.now());
+        datePicker.getEditor().setDisable(true);
         
         //TextField dateInput = new TextField();
         
@@ -75,7 +77,7 @@ public class AddEventUi {
         typeInput.getItems().add("meno");
         typeInput.getSelectionModel().selectFirst();
         
-        Label sumLabel = new Label("Rahasumma euroina (desimaaliluku sallittu)");
+        Label sumLabel = new Label("Rahasumma euroina (0.01-10000)");
         TextField sumInput = new TextField();
         
         Button addButton = new Button("Lisää tapahtuma");
@@ -92,8 +94,13 @@ public class AddEventUi {
             //String date = dateInput.getText();
             String event2 = eventInput.getValue().toString();
             String type = typeInput.getValue().toString();
-            Double sum = Double.parseDouble(sumInput.getText());
             
+            if (this.eventLogic.isSumDouble(sumInput.getText()) == false || Double.parseDouble(sumInput.getText()) > 10000 || Double.parseDouble(sumInput.getText()) < 0.01) {
+                didItWorkLabel.setText("Virhe. Rahasumman tulee olla 0.01 - 10000 euroa.");
+                return;
+            }
+            
+            Double sum = Double.parseDouble(sumInput.getText());
             String username = this.userLogic.getUser().getUsername();
             
             boolean value = this.eventLogic.addEvent(date, event2, type, sum, username);
@@ -106,12 +113,15 @@ public class AddEventUi {
             
         });
         
-        components.setPadding(new Insets(15));
+        components.setPadding(new Insets(20, 20, 20, 20));
+        components.setPrefSize(400, 300);
+        components.setSpacing(10);
         
         Scene scene = new Scene(components);
         
         return scene;
         
     }
+    
     
 }
