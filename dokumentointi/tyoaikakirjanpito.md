@@ -20,6 +20,7 @@
 | 27.04.2020        | 3 h            | Arkkitehtuurikuvauksen ja käyttöohjeen tekemistä |
 | 28.04.2020        | 1 h            | README.md kuntoon, release |
 | 06.05.2020        | 3 h            | Virheenkäsittelyä, suunnittelua |
+| 06.05.2020        | 1 h            | Testejä ja koodin siistimistä |
 
-|Tunnit yhteensä|54 h    |
+|Tunnit yhteensä|55 h    |
 |:-------------:|--------|
