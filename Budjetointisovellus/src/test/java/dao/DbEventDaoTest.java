@@ -21,7 +21,7 @@ public class DbEventDaoTest {
     String path;
     
     @Before
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, SQLException {
         
         path = temp.getRoot().getAbsolutePath() + "/test";
         

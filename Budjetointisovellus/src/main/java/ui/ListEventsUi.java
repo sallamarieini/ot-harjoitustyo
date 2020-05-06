@@ -51,7 +51,7 @@ public class ListEventsUi {
             ObservableList<Event> events = FXCollections.observableArrayList(notLoggedInList);
             list.setItems(events);
         }
-        //list.setItems(events);
+
         list.setPrefSize(500, 500);
         
         VBox components = new VBox();

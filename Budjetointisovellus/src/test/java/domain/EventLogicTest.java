@@ -78,5 +78,20 @@ public class EventLogicTest {
     public void saldoWorks() {
         assertEquals(814, this.eventLogic.saldo(eventsJorma));
     }
+    
+    @Test
+    public void doubleCheckingTrue() {
+        assertTrue(this.eventLogic.isSumDouble("4.567"));
+    }
+    
+    @Test
+    public void doubleCheckingFalse() {
+        assertFalse(this.eventLogic.isSumDouble("kaksi"));
+    }
+    
+    @Test
+    public void categoriesSumWorks() {
+        assertEquals("{palkka=2000.0, ruoka=-20.0}", this.eventLogic.categoriesSum(eventsPekka).toString());
+    }
 
 }

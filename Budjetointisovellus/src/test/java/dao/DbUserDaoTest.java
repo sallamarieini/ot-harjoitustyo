@@ -19,7 +19,7 @@ public class DbUserDaoTest {
     String path;
     
     @Before
-    public void setUp() {
+    public void setUp() throws SQLException {
         
         path = temp.getRoot().getAbsolutePath() + "/test";
         

@@ -44,10 +44,6 @@ public class BudjetointisovellusUi extends Application {
         Properties cProperties = new Properties();
         cProperties.load(new FileInputStream("categories.txt"));
         
-        /*String eka = cProperties.getProperty("a");
-        categoryLogic.addNewCategory(eka);*/
-        //System.out.println(cProperties.stringPropertyNames());
-        
         DbCategoryDao categoryDao = new DbCategoryDao(dbname);
         
         DbDao db = new DbDao();
@@ -59,7 +55,6 @@ public class BudjetointisovellusUi extends Application {
         
         for (String category: cProperties.stringPropertyNames()) {
             String v = cProperties.getProperty(category);
-            //System.out.println(v);
             this.categoryLogic.addNewCategory(v);
         }
         
@@ -77,8 +72,7 @@ public class BudjetointisovellusUi extends Application {
         Stage stage2 = new Stage();
         
         stage2.setTitle("Budjetointisovellus");
-        
-        //LoginUi loginUi = new LoginUi(this.userLogic, this.eventLogic, this.categoryLogic, stage2);
+
         LoginUi loginUi = new LoginUi(userLogic);
         Scene loginUiScene = loginUi.getLoginScene(stage);
         

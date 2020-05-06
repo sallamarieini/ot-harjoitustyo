@@ -1,8 +1,6 @@
 
 package domain;
 
-import java.time.LocalDate;
-
 /**
  * Tapahtumaa kuvaava olio
  * 

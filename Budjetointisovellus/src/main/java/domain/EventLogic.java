@@ -4,8 +4,6 @@ package domain;
 import dao.EventDao;
 import java.sql.SQLException;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Tapahtumiin liittyvä sovelluslogiikka
@@ -58,22 +56,6 @@ public class EventLogic {
             return eventDao.list(user);
         } catch (SQLException ex) {
             return new ArrayList<>();
-        }
-    }
-    
-    /**
-     * Poistaa Event-olion
-     * 
-     * @param id poistettavan tapahtuman pääavain
-     * @return palauttaa true, jos tapahtuma on poistettu onnistuneesti,
-     * virheen tapahtuessa false
-     */
-    public boolean removeEvent(int id) {
-        try {
-            eventDao.remove(id);
-            return true;
-        } catch (SQLException ex) {
-            return false;
         }
     }
     

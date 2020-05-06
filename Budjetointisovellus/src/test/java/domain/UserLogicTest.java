@@ -47,7 +47,7 @@ public class UserLogicTest {
     }
     
     @Test
-    public void wronUsernameLogIn() {
+    public void wrongUsernameLogIn() {
         assertEquals(false, this.userLogic.logUserIn("kalle001", "qwerty"));
     }
     
@@ -56,6 +56,41 @@ public class UserLogicTest {
         this.userLogic.logUserIn("kalle002", "qwerty");
         this.userLogic.logUserOut();
         assertEquals(null, this.userLogic.getUser());
+    }
+    
+    @Test
+    public void rightUsernameLength() {
+        assertEquals(true, this.userLogic.usernameLength("pesusieni"));
+    }
+    
+    @Test
+    public void usernameInUse() {
+        assertEquals(false, this.userLogic.addUser("Kalle", "kalle002", "kalle01"));
+    }
+    
+    @Test
+    public void tooShortPassword() {
+        assertFalse(this.userLogic.passwordLength("as"));
+    }
+    
+    @Test
+    public void tooShortName() {
+        assertFalse(this.userLogic.nameNotEmpty(""));
+    }
+    
+    @Test
+    public void tooShortUsername() {
+        assertFalse(this.userLogic.usernameLength("o"));
+    }
+    
+    @Test
+    public void rightPasswordLength() {
+        assertTrue(this.userLogic.passwordLength("qwerty"));
+    }
+    
+    @Test
+    public void rightNameLength() {
+        assertTrue(this.userLogic.nameNotEmpty("Pekka"));
     }
     
 }

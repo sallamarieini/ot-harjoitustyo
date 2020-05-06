@@ -60,11 +60,8 @@ public class AddEventUi {
         DatePicker datePicker = new DatePicker(LocalDate.now());
         datePicker.getEditor().setDisable(true);
         
-        //TextField dateInput = new TextField();
-        
         Label eventLabel = new Label("Kategoria");
         ComboBox eventInput = new ComboBox();
-        //TextField eventInput = new TextField();
         
         List<Category> list = this.categoryLogic.getAllCategories();
         ObservableList<Category> cList = FXCollections.observableArrayList(list);
@@ -91,7 +88,6 @@ public class AddEventUi {
             
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             String date = formatter.format(datePicker.getValue());
-            //String date = dateInput.getText();
             String event2 = eventInput.getValue().toString();
             String type = typeInput.getValue().toString();
             

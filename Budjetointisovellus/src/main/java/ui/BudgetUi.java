@@ -4,7 +4,6 @@ package ui;
 import domain.CategoryLogic;
 import domain.EventLogic;
 import domain.UserLogic;
-import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -54,10 +53,6 @@ public class BudgetUi {
         VBox layout = new VBox();
         layout.setSpacing(10);
         
-        String name = "";
-        //name = this.userLogic.getUser().getName();
-        //String name = "Pekka";
-        //Label welcomeLabel = new Label("Hei " + name + "!");
         Label welcomeLabel = new Label("Tervetuloa!");
         
         Button addEventButton = new Button("Lisää uusi tapahtuma");
@@ -76,8 +71,6 @@ public class BudgetUi {
         layout.setPrefSize(500, 300);
         layout.setAlignment(Pos.CENTER);
         layout.setPadding(new Insets(20, 20, 20, 20));
-        
-        //Scene outlook = new Scene(layout);
         
         addEventButton.setOnAction((event) -> {
             
@@ -105,26 +98,6 @@ public class BudgetUi {
             stage2.show();
         });
         
-        /*Label logoutM = new Label("Olet kirjautunut ulos.");
-        Label logoutM2 = new Label("Sulje kaikki ikkunat.");
-        
-        VBox comp = new VBox();
-        comp.getChildren().addAll(logoutM, logoutM2);
-        comp.setPrefSize(200, 100);
-        comp.setAlignment(Pos.CENTER);
-        comp.setPadding(new Insets(20, 20, 20, 20));
-        
-        Scene logoutMessage = new Scene(comp);*/
-        
-        ///logoutButton.setOnAction((event) -> {
-            ///userLogic.logUserOut();
-            //LoginUi loginUi = new LoginUi(userLogic, eventLogic, stage2);
-            ///window.setScene(logoutMessage);
-            //window.setScene(loginUi.getLoginScene(stage2));
-            ///window.show();
-        ///});
-        //window.show();
-        
         logoutButton.setOnAction((event) -> {
             logOut(window);
         });
@@ -132,10 +105,7 @@ public class BudgetUi {
         Scene outlook = new Scene(layout);
         
         return outlook;
-        
-        //window.setScene(outlook);
-        
-        //window.show();
+
     }
     
     /**
@@ -147,9 +117,5 @@ public class BudgetUi {
         this.userLogic.logUserOut();
         window.setScene(this.loginUi);
     }
-        
-    /*public static void main(String[] args) {
-        launch(args);
-    }*/
     
 }

@@ -31,22 +31,22 @@ public class DbEventDao implements EventDao<Event> {
      */
     @Override
     public void create(Event object) throws SQLException {
-            
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
-            
-            PreparedStatement p = conn.prepareStatement(
-                    "INSERT INTO Events (date, event, type, sum, user) VALUES (?,?,?,?,?)");
-            
-            p.setString(1, object.getDate());
-            p.setString(2, object.getEvent());
-            p.setString(3, object.getType());
-            p.setDouble(4, object.getSum());
-            p.setString(5, object.getUser());
-            
-            p.executeUpdate();
-            
-            p.close();
-            conn.close();
+
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
+
+        PreparedStatement p = conn.prepareStatement(
+                "INSERT INTO Events (date, event, type, sum, user) VALUES (?,?,?,?,?)");
+
+        p.setString(1, object.getDate());
+        p.setString(2, object.getEvent());
+        p.setString(3, object.getType());
+        p.setDouble(4, object.getSum());
+        p.setString(5, object.getUser());
+
+        p.executeUpdate();
+
+        p.close();
+        conn.close();
             
         
     }
@@ -79,27 +79,6 @@ public class DbEventDao implements EventDao<Event> {
         conn.close();
         
         return events;
-        
-    }
-
-    /**
-     * Poistaa valitun tapahtuman tietokannasta.
-     * 
-     * @param id poistettavan tapahtuman pääavain
-     * @throws SQLException Tietokanta heittää poikkeuksen virhetilanteessa.
-     */
-    @Override
-    public void remove(int id) throws SQLException {
-        
-        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + name);
-        
-        PreparedStatement p = conn.prepareStatement("DELETE FROM Events WHERE id = ?");
-        p.setInt(1, id);
-        
-        p.executeUpdate();
-        
-        p.close();
-        conn.close();
         
     }
     
