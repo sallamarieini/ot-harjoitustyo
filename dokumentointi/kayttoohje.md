@@ -15,7 +15,7 @@ Ohjelma käynnistetään komennolla `java -jar xxx`.
 
 Kirjautumisnäkymän yläosassa on nappi *Luo uusi käyttäjätunnus*, jota painamalla esiin vaihtuu näkymä, jossa voi luoda uuden käyttäjän. Uusi käyttäjä luodaan syöttämällä pyydetyt tiedot kenttiin ja painamalla sitten nappia *Luo käyttäjätunnus*.
 
-*kuva näkymästä*
+![Rekisteröidy](/dokumentointi/Kuvat/kayttoohje/Rekisteroidy.png)
 
 Jos käyttäjätunnus luotiin onnistuneesti, ilmestyy ikkunaan teksti *Rekisteröityminen onnistui*. Takaisin kirjautumisnäkymään pääsee klikkaamalla nappia *Takaisin*.
 
@@ -23,7 +23,7 @@ Jos käyttäjätunnus luotiin onnistuneesti, ilmestyy ikkunaan teksti *Rekister�
 
 Sovellus käynnistyy näkymään, josta voi kirjautua sisälle.
 
-*kuva näkymästä*
+![Kirjaudu](/dokumentointi/Kuvat/kayttoohje/Kirjaudu.png)
 
 Kirjautuminen tapahtuu kirjoittamalla kenttään *Käyttäjätunnus* oma käyttäjätunnus ja kenttään *Salasana* käyttäjätunnukseen liittyvä salasana. Onnistuneen kirjautumisen jälkeen näkymä vaihtuu.
 
@@ -31,7 +31,7 @@ Kirjautuminen tapahtuu kirjoittamalla kenttään *Käyttäjätunnus* oma käytt�
 
 Kirjautumisen jälkeen näkymä vaihtuu *päävalikoksi*.
 
-*kuva näkymästä*
+![Päävalikko](/dokumentointi/Kuvat/kayttoohje/Paavalikko.png)
 
 Tässä näkymässä käyttäjä voi valita valitsemansa toiminnon tai kirjautua ulos sovelluksesta. Kun käyttäjä kirjautuu ulos sovelluksesta, näkymä vaihtuu kirjautumisnäkymäksi.
 
@@ -39,7 +39,7 @@ Tässä näkymässä käyttäjä voi valita valitsemansa toiminnon tai kirjautua
 
 Kun päänäkymästä painaa nappia *Lisää uusi tapahtuma*, sovellus avaa uuden ikkunan, jossa käyttäjä voi lisätä uuden tapahtuman.
 
-*kuva näkymästä*
+![Lisää tapahtuma](/dokumentointi/Kuvat/kayttoohje/LisaaTapahtuma.png)
 
 Syöttämällä pyydetyt tiedot ja painamalla *Lisää tapahtuma* painiketta käyttäjä voi lisätä tapahtuman. Jos rahasumman syöttää desimaalilukuna, tulee desimaalierottimen olla piste. Näkymästä voi poistua sulkemalla ikkunan oikean ylänurkan x-painikkeella.
 
@@ -47,7 +47,7 @@ Syöttämällä pyydetyt tiedot ja painamalla *Lisää tapahtuma* painiketta kä
 
 Päänäkymän *Näytä kaikki tapahtumat* painike avaa uuden ikkunan, jossa on lista käyttäjän sovellukseen syöttämistä tapahtumista.
 
-*kuva näkymästä*
+![Kaikki tapahtumat](/dokumentointi/Kuvat/kayttoohje/Tapahtumat.png)
 
 Tapahtumat on esitetty muodossa *päivämäärä, kategoria, tyyppi (tulo/meno), rahasumma*. Näkymästä voi poistua sulkemalla ikkunan.
 
@@ -55,10 +55,10 @@ Tapahtumat on esitetty muodossa *päivämäärä, kategoria, tyyppi (tulo/meno),
 
 Päänäkymän painike *Vertaile tuloja ja menoja* avaa ikkunan, jossa tulot ja menot on esitetty visuaalisesti pylväsdiagrammina. Lisäksi ikkunan yläosassa on laskettu tulojen ja menojen erotus; negatiivinen luku ilmaisee, että menoja on enemmän kuin tuloja. Näkymästä voi poistua sulkemalla ikkunan.
 
-*kuva näkymästä*
+![Tulot ja menot](/dokumentointi/Kuvat/kayttoohje/TulotMenot.png)
 
 ## Tulojen ja menojen vertailu kategorioittain
 
 Päänäkymän painikkeen *Tulot ja menot kategorioittain* avaa näkymän, jossa tulot ja menot on esitetty kategorioittain pylväsdiagrammina. Tuloja ja menoja kuvastavat pylväät ovat erivärisiä. Näkymästä voi poistua sulkemalla ikkunan.
 
-*kuva näkymästä*
+![Tulot ja menot kategorioittain](/dokumentointi/Kuvat/kayttoohje/Kategoriat.png)
