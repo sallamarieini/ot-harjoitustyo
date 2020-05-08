@@ -18,6 +18,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -56,6 +57,9 @@ public class AddEventUi {
         
         Label headlineLabel = new Label("Lisää tapahtuma");
         
+        Label informationLabel = new Label("Käytä desimaalierottimena pistettä.");
+        informationLabel.setTextFill(Color.web("#4E4A7A ", 0.8));
+        
         Label dateLabel = new Label("Päivämäärä");
         DatePicker datePicker = new DatePicker(LocalDate.now());
         datePicker.getEditor().setDisable(true);
@@ -82,7 +86,7 @@ public class AddEventUi {
         Label didItWorkLabel = new Label("");
         
         components.getChildren().addAll(headlineLabel, dateLabel, datePicker, eventLabel,
-                eventInput, typeLabel, typeInput, sumLabel, sumInput, addButton, didItWorkLabel);
+                eventInput, typeLabel, typeInput, sumLabel, sumInput, informationLabel, addButton, didItWorkLabel);
         
         addButton.setOnAction((event) -> {
             

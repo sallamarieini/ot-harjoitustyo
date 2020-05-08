@@ -108,7 +108,7 @@ public class UserLogic {
      * muuten false
      */
     public boolean passwordLength(String password) {
-        return password.length() >= 5;
+        return password.length() >= 3;
     }
     
     /**

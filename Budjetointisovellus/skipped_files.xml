@@ -13,4 +13,5 @@
     <suppress files="ui.LoginUi.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="ui.EventGraphUi.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="ui.CategoriesSumUi.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="budget.main.Main" checks="[a-zA-Z0-9]*"/>
 </suppressions>

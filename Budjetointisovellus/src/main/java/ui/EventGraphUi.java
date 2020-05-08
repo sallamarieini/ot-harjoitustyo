@@ -50,7 +50,7 @@ public class EventGraphUi {
         
         List<Event> events = this.eventLogic.getEvents(this.userLogic.getUser().getUsername());
         
-        long saldoNumber = this.eventLogic.saldo(events);
+        double saldoNumber = this.eventLogic.saldo(events);
         saldo.setText("Tulojesi ja menojesi erotus on "+ saldoNumber);
         
         CategoryAxis x = new CategoryAxis();

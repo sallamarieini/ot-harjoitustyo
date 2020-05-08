@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -74,6 +75,10 @@ public class LoginUi {
         VBox layout2 = new VBox();
         Label headlineLabel = new Label("Rekisteröidy käyttäjäksi");
         
+        Label instruction = new Label("Nimen tulee olla min. yhden merkin pituinen, \n"
+                + "ja käyttäjätunnuksen ja salasanan tulee olla min. kolme merkkiä");
+        instruction.setTextFill(Color.web("#4E4A7A", 0.8));
+        
         Label nameLabel = new Label("Nimi");
         TextField nameField = new TextField();
         Label usernameLabel2 = new Label("Käyttäjänimi");
@@ -85,9 +90,9 @@ public class LoginUi {
         
         Label didItWorkLabel = new Label("");
         
-        layout2.getChildren().addAll(headlineLabel, nameLabel, nameField, usernameLabel2, 
+        layout2.getChildren().addAll(headlineLabel, instruction, nameLabel, nameField, usernameLabel2, 
                 usernameField2, passwordLabel2, passwordField2, registerButton2, didItWorkLabel, previous);
-        layout2.setPrefSize(500, 400);
+        layout2.setPrefSize(550, 400);
         layout2.setAlignment(Pos.CENTER);
         layout2.setPadding(new Insets(20, 20, 20, 20));
         layout2.setSpacing(10);

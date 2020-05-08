@@ -105,8 +105,8 @@ public class EventLogic {
      * @param list tapahtumat sisältävä lista
      * @return palauttaa saldon
      */
-    public long saldo(List<Event> list) {
-        return Math.round(sumIncome(list) - sumExpence(list));
+    public double saldo(List<Event> list) {
+        return Math.round(sumIncome(list) - sumExpence(list) * 100.0) / 100.0;
     }
     
     /**
