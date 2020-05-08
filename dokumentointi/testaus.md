@@ -30,7 +30,7 @@ Sovellusta on testattus luomalla käyttäjiä ja tapahtumia käyttöliittymäss�
 
 ### Toiminnallisuudet
 
-Määrittelydokumentin toiminnallisuudet on testattu läpi. Syötekenttiin on yritetty testeissä syöttää monenlaista tietoa, myös vääränlaista.
+[Määrittelydokumentin](/dokumentointi/vaatimusmaarittely.md) toiminnallisuudet on testattu läpi. Syötekenttiin on yritetty testeissä syöttää monenlaista tietoa, myös vääränlaista.
 
 ## Sovellukseen jääneet laatuongelmat
 
