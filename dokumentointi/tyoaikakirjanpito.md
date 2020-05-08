@@ -22,6 +22,7 @@
 | 06.05.2020        | 3 h            | Virheenkäsittelyä, suunnittelua |
 | 06.05.2020        | 1 h            | Testejä ja koodin siistimistä |
 | 08.05.2020        | 1 h            | Pieniä parannuksia |
+| 08.05.2020        | 4 h            | Dokumentaation laatimista |
 
-|Tunnit yhteensä|56 h    |
+|Tunnit yhteensä|60 h    |
 |:-------------:|--------|
