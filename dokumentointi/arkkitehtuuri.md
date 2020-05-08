@@ -47,7 +47,21 @@ Kun käyttäjä syöttää sovellukseen käyttäjätunnuksen ja salasanan ja kli
 
 Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu *domain* pakkauksen luokan *UserLogic* metodia *logUserIn*, jolle annetaan parametreiksi käyttäjän syöttämä käyttäjätunnus ja salasana. Sovelluslogiikka selvittää tämän jälkeen *UserDao*:n avulla, onko käyttäjätunnusta olemassa ja jos on, niin käyttäjälle näytetään sovelluksen päävalikko.
 
-### Lisää sekvenssikaavioita tulossa myöhemmin
+### Uuden käyttäjätunnuksen luominen
+
+Kun käyttäjä on täyttänyt vaadittavat kentät Luo uusi käyttäjä-näkymässä niin, että tiedot ovat muodoltaan oikeita ja käyttäjätunnus ei ole jo käytössä, ja painaa "Luo käyttäjätunnus"-nappia, sovelluksen kontrolli etenee seuraavasti:
+
+![Sekvenssikaavio uuden käyttäjätunnuksen luomisesta](/dokumentointi/Kuvat/Sekvenssikaavio2.png)
+
+Klikattua painiketta kuunteleva tapahtumakäsittelijä kutsuu luokan *UserLogic* luokan metodeita, jotka tarkistavat käyttäjän syöttämien tietojen muodon oikeellisuuden. Jos kaikki nämä metodit palauttavat true, kutsuu luokan *UserLogic* metodia *addUser*, joka saa parametreina käyttäjän syöttämät tiedot. *UserDao* rajapinnan avulla tarkistetaan, onko käyttäjänimi jo käytössä. Jos ei, palauttaa tarkistamisen suorittanut *read*-metodi null. Tämän jälkeen sovelluslogiikka luo uuden *User*-olion. Sitten luokka *UserLogic* kutsuu *UserDao*:n metodia create, jolla on parametrina juuri luotu *User*-olio. Käyttöliittymä ilmoittaa onnistuneesta toiminnosta näyttämällä tekstin "Rekisteröityminen onnistui".
+
+### Uuden tapahtuman lisääminen
+
+Kun käyttäjä on syöttänyt tapahtuman tiedot ja klikkaa nappia "Lisää tapahtuma", sovelluksen kontrolli etenee seuraavasti:
+
+![Sekvenssikaavio tapahtuman lisäämisestä](/dokumentointi/Kuvat/Sekvenssikaavio3.png)
+
+Tapahtumakäsittelijä kutsuu sovelluslogiikan luokan *EventLogic* metodia *isSumDouble*, jotta voidaan tarkistaa, onko käyttäjän syöttämä summa oikean muotoinen. Jos metodi palauttaa true, käyttöliittymä kutsuu luokan *EventLogic* metodia *addEvent*, jossa parametreina ovat käyttäjän syöttämät tapahtuman tiedot. Sovelluslogiikka luo uuden *Event*-olion ja tallenttaa sen kutsumalla *EventDao*:n metodia *create*. Onnistuneen tallettamisen jälkeen *EventLogic* palauttaa true, ja käyttäjä saa tiedon tapahtuman tallentamisen onnistumisesta.
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
