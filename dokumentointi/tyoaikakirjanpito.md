@@ -23,6 +23,7 @@
 | 06.05.2020        | 1 h            | Testejä ja koodin siistimistä |
 | 08.05.2020        | 1 h            | Pieniä parannuksia |
 | 08.05.2020        | 4 h            | Dokumentaation laatimista |
+| 08.05.2020        | 1 h            | Käyttöliittymäluonnos |
 
-|Tunnit yhteensä|60 h    |
+|Tunnit yhteensä|61 h    |
 |:-------------:|--------|
