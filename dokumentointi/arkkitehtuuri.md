@@ -51,4 +51,6 @@ Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu *domain* pakk
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
-Tulossa myöhemmin
+Dao-luokissa esiintyy useasti yhteyden luominen tietokantaan, minkä voisi suorittaa kyseisissä luokissa vain kerran. Näin myös toisteinen koodi vähenisi.
+
+JavaFX ei ole kovin tuttua, joten sen käyttöä käyttöliittymää luodessa voisi parantaa. Käyttöliittymässä voisi myös hyödyntää JavaFX:n tilalla FXML:ää.
