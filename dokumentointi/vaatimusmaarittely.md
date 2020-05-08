@@ -8,32 +8,39 @@ Sovelluksen avulla käyttäjä voi pitää kirjaa oman henkilökohtaisen taloute
 
 Sovelluksessa on alkuvaiheessa vain yhdenlaisia käyttäjiä eli tyypiltään nämä ovat tavallisia käyttäjiä. Myöhemmin sovellukseen voisi lisätä erilaisilla oikeuksilla uuden käyttäjätyypin.
 
+## Käyttöliittymäluonnos
+
+Tulossa
+
 ## Perusversion toiminnallisuus
 
 ### Ennen kirjautumista
 
-* uuden käyttäjätunnuksen luominen (tehty, alakohtaa ei tehty)
-  * tunnuksen täytyy olla uniikki ja vähintään viiden merkin pituinen, mahdollisen salasanan tulee olla vähintään kahdeksan merkkiä pitkä
+* uuden käyttäjätunnuksen luominen
+  * tunnuksen täytyy olla uniikki ja vähintään kolmen merkin pituinen, mahdollisen salasanan tulee olla vähintään kolme merkkiä pitkä
 
-* sovellukseen kirjautuminen (tehty)
-  * käyttäjä kirjautuu sovellukseen syöttämällä käyttäjätunnuksen ja mahdollisesti salasanan (tehty)
-  * jos käyttäjätunnus tai salasana on virheellinen, siitä annetaan käyttäjälle ilmoitus (tehty)
+* sovellukseen kirjautuminen
+  * käyttäjä kirjautuu sovellukseen syöttämällä käyttäjätunnuksen ja salasanan
+  * jos käyttäjätunnus tai salasana on virheellinen, siitä annetaan käyttäjälle ilmoitus
   
 ### Kirjautumisen jälkeen
 
-* käyttäjälle avautuu kirjautumisen jälkeen aloitusvalikko (tehty), josta hän voi
-  * lisätä uuden tapahtuman (tehty)
-  * lisätä uuden kategorian tapahtumille
-  * listata tapahtumat (tehty, hyvin perus versio)
-  * tarkastella tapahtumia kategorian mukaan, diagrammi (tehty)
-  * tarkastella tuloja ja menoja, diagrammi (tehty)
-  * kirjautua ulos (tehty)
+* käyttäjälle avautuu kirjautumisen jälkeen päävalikko, josta hän voi
+  * lisätä uuden tapahtuman
+  * listata kaikki tapahtumat
+  * tarkastella tapahtumia kategorian mukaan
+  * tarkastella tuloja ja menoja
+  * kirjautua ulos
   
-* kaikista näkymistä on mahdollista palata aloitusvalikkoon
+* kaikista näkymistä on mahdollista palata päävalikkoon
 
 ## Jatkokehitysideoita
 
 * uusi käyttäjätyyppi, joka voi esimerkiksi poistaa käyttäjätunnuksia
 * käyttäjä voi muuttaa tietojaan, kuten salasanaa
+* päävalikossa nähtävissä, kuka sillä hetkellä on kirjautunut sisään sovellukseen
 * erilaisia visualisaatioita tuloista ja menoista
+* uuden kategorian lisääminen
 * kategorian poistaminen
+* tapahtuman muokkaaminen
+* tapahtuman poistaminen
