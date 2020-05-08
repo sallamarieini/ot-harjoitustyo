@@ -34,4 +34,4 @@ Sovellusta on testattus luomalla käyttäjiä ja tapahtumia käyttöliittymäss�
 
 ## Sovellukseen jääneet laatuongelmat
 
-Testit eivät kata tilanteita, joissa tietokanta heittää poikkeuksen, jolloin tietokannan vioittuessa sovelluksen käytössä voi esiintyä ongelmia, joita ei ole otettu huomioon. Sovellukseen kirjautumisen jälkeen käyttäjä ei pysty näkemään, kuka on kirjautunut sisään, mikä voi osoittautua sovelluksen käyttäjälle ongelmalliseksi.
+Testit eivät kata tilanteita, joissa tietokanta heittää poikkeuksen, jolloin tietokannan vioittuessa sovelluksen käytössä voi esiintyä ongelmia, joita ei ole otettu huomioon. Lisäksi sovellukseen kirjautumisen jälkeen käyttäjä ei pysty näkemään, kuka on kirjautunut sisään, mikä voi osoittautua sovelluksen käyttäjälle ongelmalliseksi.
