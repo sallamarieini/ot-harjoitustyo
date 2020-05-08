@@ -1,8 +1,11 @@
 # Käyttöohje
 
-Lataa tiedosto xxx.
+Lataa tiedosto [Budjetointisovellus.jar]() ja tiedostot *config.properties* ja *categories.txt*.
 
 ## Konfigurointi
+
+Ohjelma olettaa, että sen käynnistyshakemistossa on tiedostot *config.properties* ja *categories.txt*. Tiedosto *config.properties* määrittelee sovelluksen käyttämän tietokannan nimen. Kun sovellus käynnistetään, sovellus luo tiedostossa määritellyn nimisen tietokannan, jos tietokantaa ei ole jo luotu. Oletuksena tietokannan nimeksi on määritelty *budget.db*.
+Tiedosto *categories.txt* määrittelee tietokantaan kategoriat.
 
 ## Ohjelman käynnistäminen
 
