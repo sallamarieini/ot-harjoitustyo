@@ -76,7 +76,7 @@ public class EventLogicTest {
     
     @Test
     public void saldoWorks() {
-        assertEquals(814, this.eventLogic.saldo(eventsJorma));
+        assertEquals(814.00, this.eventLogic.saldo(eventsJorma), 2);
     }
     
     @Test

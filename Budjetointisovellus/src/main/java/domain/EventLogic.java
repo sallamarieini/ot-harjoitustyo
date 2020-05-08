@@ -2,7 +2,9 @@
 package domain;
 
 import dao.EventDao;
+import static java.lang.Double.parseDouble;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -106,7 +108,8 @@ public class EventLogic {
      * @return palauttaa saldon
      */
     public double saldo(List<Event> list) {
-        return Math.round(sumIncome(list) - sumExpence(list) * 100.0) / 100.0;
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        return parseDouble(decimal.format(sumIncome(list) - sumExpence(list)));
     }
     
     /**
