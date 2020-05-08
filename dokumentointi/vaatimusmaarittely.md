@@ -10,7 +10,11 @@ Sovelluksessa on alkuvaiheessa vain yhdenlaisia käyttäjiä eli tyypiltään n�
 
 ## Käyttöliittymäluonnos
 
-Tulossa
+Sovellus koostuu useista eri näkymistä.
+
+![Käyttöliittymäluonnos](/dokumentointi/Kuvat/Kayttoliittyma.png)
+
+Sovellus aukeaa kirjautumisnäkymään. Kirjautumisnäkymästä on mahdollisuus siirtyä luomaan uusi käyttäjätunnus tai kirjautua sisään ja siirtyä päävalikkoon.
 
 ## Perusversion toiminnallisuus
 
