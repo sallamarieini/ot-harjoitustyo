@@ -58,7 +58,7 @@ public class AddEventUi {
         Label headlineLabel = new Label("Lisää tapahtuma");
         
         Label informationLabel = new Label("Käytä desimaalierottimena pistettä.");
-        informationLabel.setTextFill(Color.web("#4E4A7A ", 0.8));
+        informationLabel.setTextFill(Color.web("#4E4A7A", 0.8));
         
         Label dateLabel = new Label("Päivämäärä");
         DatePicker datePicker = new DatePicker(LocalDate.now());
