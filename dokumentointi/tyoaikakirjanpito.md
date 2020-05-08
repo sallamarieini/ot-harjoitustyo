@@ -21,6 +21,7 @@
 | 28.04.2020        | 1 h            | README.md kuntoon, release |
 | 06.05.2020        | 3 h            | Virheenkäsittelyä, suunnittelua |
 | 06.05.2020        | 1 h            | Testejä ja koodin siistimistä |
+| 08.05.2020        | 1 h            | Pieniä parannuksia |
 
-|Tunnit yhteensä|55 h    |
+|Tunnit yhteensä|56 h    |
 |:-------------:|--------|
