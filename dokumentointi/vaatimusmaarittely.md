@@ -48,3 +48,4 @@ Sovellus aukeaa kirjautumisnäkymään. Kirjautumisnäkymästä on mahdollisuus 
 * kategorian poistaminen
 * tapahtuman muokkaaminen
 * tapahtuman poistaminen
+* Tapahtumien listaaminen tietyltä aikaväliltä
