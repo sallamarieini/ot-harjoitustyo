@@ -24,6 +24,7 @@
 | 08.05.2020        | 1 h            | Pieniä parannuksia |
 | 08.05.2020        | 4 h            | Dokumentaation laatimista |
 | 08.05.2020        | 1 h            | Käyttöliittymäluonnos |
+| 09.05.2020        | 2 h            | Loppupalautus, dokumentaation viimeistely |
 
-|Tunnit yhteensä|61 h    |
+|Tunnit yhteensä|63 h    |
 |:-------------:|--------|
