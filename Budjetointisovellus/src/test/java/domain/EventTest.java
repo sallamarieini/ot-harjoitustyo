@@ -43,7 +43,6 @@ public class EventTest {
     @Test
     public void toStringWorksTulo() {
         
-        //Event event = new Event(1, "22.03.2020", "ruoka", "tulo", 20, "Pekka");
         String right = "22.03.2020, ruoka, tulo, 20.0 €";
         assertEquals(right, event.toString());
         
