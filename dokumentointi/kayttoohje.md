@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto [Budjetointisovellus.jar]() ja tiedostot *config.properties* ja *categories.txt*.
+Lataa tiedosto [Budjetointisovellus.jar](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/loppupalautus) ja tiedostot *config.properties* ja *categories.txt*.
 
 ## Konfigurointi
 
@@ -9,7 +9,7 @@ Tiedosto *categories.txt* määrittelee tietokantaan kategoriat.
 
 ## Ohjelman käynnistäminen
 
-Ohjelma käynnistetään komennolla `java -jar xxx`.
+Ohjelma käynnistetään komennolla `java -jar Budjetointisovellusv1.0.jar`.
 
 ## Rekisteröityminen
 
