@@ -2,10 +2,6 @@
 
 Sovelluksen avulla käyttäjä voi pitää kirjaa oman henkilökohtaisen taloutensa menoista ja tuloista sekä tarkastella niitä. Useamman käyttäjän on mahdollista rekisteröityä sovellukseen.
 
-## Huomio javan versioista
-
-JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi toimia Helsingin yliopiston tietojenkäsittelytieteen laitoksen cubbli-Linuxeissa olevalla Java:n versiolla 11.
-
 ## Dokumentaatio
 
 [Käyttöohje](/dokumentointi/kayttoohje.md)
@@ -23,6 +19,8 @@ JavaFX aiheuttaa ongelmia ohjelmiston konfiguroinnin suhteen. Koodin pitäisi to
 [Viikko 5](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/viikko5)
 
 [Viikko 6](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/viikko6)
+
+[Loppupalautus](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Komentorivitoiminnot
 
