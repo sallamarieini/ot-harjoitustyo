@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto [Budjetointisovellus.jar](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/loppupalautus) ja tiedostot *config.properties* ja *categories.txt*.
+Lataa tiedosto [Budjetointisovellusv1.0.jar](https://github.com/sallamarieini/ot-harjoitustyo/releases/tag/loppupalautus) ja tiedostot *config.properties* ja *categories.txt*.
 
 ## Konfigurointi
 
