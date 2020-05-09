@@ -63,6 +63,10 @@ Kun käyttäjä on syöttänyt tapahtuman tiedot ja klikkaa nappia "Lisää tapa
 
 Tapahtumakäsittelijä kutsuu sovelluslogiikan luokan *EventLogic* metodia *isSumDouble*, jotta voidaan tarkistaa, onko käyttäjän syöttämä summa oikean muotoinen. Jos metodi palauttaa true, käyttöliittymä kutsuu luokan *EventLogic* metodia *addEvent*, jossa parametreina ovat käyttäjän syöttämät tapahtuman tiedot. Sovelluslogiikka luo uuden *Event*-olion ja tallenttaa sen kutsumalla *EventDao*:n metodia *create*. Onnistuneen tallettamisen jälkeen *EventLogic* palauttaa true, ja käyttäjä saa tiedon tapahtuman tallentamisen onnistumisesta.
 
+### Muut toiminnallisuudet
+
+Samat periaatteet toistuvat muissakin toiminnallisuuksissa, eli tapahtumakäsittelijä käyttöliittymässä kutsuu sovelluslogiikan metodia ja sovelluslogiikka myös DAO-luokien metodeista sopivaa, jos toimintoon liittyy tietokantaan kirjoittamista tai tietokannasta lukemista.
+
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
 Dao-luokissa esiintyy useasti yhteyden luominen tietokantaan, minkä voisi suorittaa kyseisissä luokissa vain kerran. Näin myös toisteinen koodi vähenisi.
