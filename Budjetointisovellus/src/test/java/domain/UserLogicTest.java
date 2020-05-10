@@ -93,4 +93,9 @@ public class UserLogicTest {
         assertTrue(this.userLogic.nameNotEmpty("Pekka"));
     }
     
+    @Test
+    public void noSameUernames() {
+        assertEquals(false, userLogic.addUser("Norppa", "nopa", "nopa1234"));
+    }
+    
 }
